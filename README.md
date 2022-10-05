@@ -1,6 +1,6 @@
 This project includes data and code for the following paper:
 
-**Schmidt, H., Tran, S., Medaglia, J.A., Ulichney, V., & Helion, C. (2022). Conversational linguistic features predict social network learning.**
+**Schmidt, H., Tran, S., Medaglia, J.A., Ulichney, V., & Helion, C. (2022). Conversational linguistic features predict social network learning. *PsyArXiv Pre-Print: https://psyarxiv.com/fn4my/***
 
 Additional information can be found on OSF at: https://osf.io/8wqhb/
 

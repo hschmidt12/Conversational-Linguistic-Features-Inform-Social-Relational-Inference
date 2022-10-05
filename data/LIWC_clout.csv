@@ -1,0 +1,766 @@
+ClipNumber,Speaker,Recipient,RecipientType,element_id,sentence_id,ColumnID,Text,Segment,WC,Clout
+1,ShiiAnn,Camera,Camera,1,1,Dialogue,"Well, last night was really emotional.",1,6,40.06
+1,ShiiAnn,Camera,Camera,1,2,Dialogue,"Um, I got really choked up when they voted Kathy out.",1,11,40.06
+1,ShiiAnn,Camera,Camera,1,3,Dialogue,"The smug, horrible Chaperan superior tribe pagonging all of us Mogo Mogo members, you know basically voting one after another out.",1,21,99
+1,ShiiAnn,Camera,Camera,1,4,Dialogue,"I knew Kathy was going, and I just got really emotional because she was my rock out here.",1,18,2.75
+1,ShiiAnn,Camera,Camera,1,5,Dialogue,And she was my one true friend.,1,7,97.11
+1,ShiiAnn,Camera,Camera,1,6,Dialogue,"And now that she's gone, I don't have anyone here.",1,10,40.06
+1,ShiiAnn,Camera,Camera,1,7,Dialogue,I've got no one.,1,4,1
+1,ShiiAnn,Rob,One Person,2,1,Dialogue,I know I'm slated next to go.,1,7,1
+1,Rob,ShiiAnn,One Person,3,1,Dialogue,Mh-hmm.,1,1,40.06
+1,ShiiAnn,Rob,One Person,4,1,Dialogue,And you know I have to play the game was hard as I can before I go.,1,17,12.77
+1,ShiiAnn,Rob,One Person,4,2,Dialogue,"So, I'm just asking you straight up, you know, are you going to keep up with your original six, or are you going to be willing to look at other possibilities.",1,31,99
+1,Rob,ShiiAnn,One Person,5,1,Dialogue,"Yeah like honestly, I'm going to stay with my plan.",1,10,1
+1,ShiiAnn,Rob,One Person,6,1,Dialogue,"That's cool, you got to play your last card.",1,9,99
+1,Rob,ShiiAnn,One Person,7,1,Dialogue,Win immunity.,1,2,40.06
+1,ShiiAnn,Rob,One Person,8,1,Dialogue,I'm going to try to win immunity.,1,7,1
+1,ShiiAnn,Rob,One Person,8,2,Dialogue,I will.,1,2,1
+1,Rob,ShiiAnn,One Person,9,1,Dialogue,"You've got to beat me, though, cause I need it just as much as you.",1,15,77.41
+1,Rob,ShiiAnn,One Person,9,2,Dialogue,"I know I do, you know?",1,6,40.06
+1,ShiiAnn,Rob,One Person,10,1,Dialogue,I know you do.,1,4,99
+1,ShiiAnn,Camera,Camera,11,1,Dialogue,I'm extremely vulnerable right now and chances of me making it to the final two are slim.,1,17,2.18
+1,ShiiAnn,Camera,Camera,11,2,Dialogue,"So, at this point, my best chances is to play as hard as I can, call everyone on their game and stir it up before I leave.",1,27,20.91
+1,ShiiAnn,Rob,One Person,12,1,Dialogue,"If you make it to the final two, I'll be shocked.",1,11,40.06
+1,Rob,ShiiAnn,One Person,13,1,Dialogue,I know.,1,2,1
+1,ShiiAnn,Rob,One Person,14,1,Dialogue,"With your strategy, current strategy.",1,5,99
+1,ShiiAnn,Rob,One Person,14,2,Dialogue,"And I hope you do well, but, you know.",1,9,99
+1,ShiiAnn,Rob,One Person,14,3,Dialogue,I'm wishing myself luck in the next immunity challenge.,1,9,1
+1,Rob,Tribe,Group,15,1,Dialogue,She tried telling me what my strategy should be.,1,9,2.75
+1,Alicia,Rob,One Person,16,1,Dialogue,Right.,1,1,40.06
+1,Rob,Tribe,Group,17,1,Dialogue,"You need to watch out for this person, you need to watch out for this one.",1,16,99
+1,Alicia,Rob,One Person,18,1,Dialogue,Here we go.,1,3,99
+1,Rob,Tribe,Group,19,1,Dialogue,She's doing that.,1,3,99
+1,Rob,Tribe,Group,19,2,Dialogue,Just with patient and listened to her.,1,7,97.11
+1,Rob,Tribe,Group,19,3,Dialogue,"I was like ""all right, thanks for the info, ShiiAnn.""",1,10,3.95
+1,Rob,Tribe,Group,19,4,Dialogue,"Just collectively as a group, we got to make sure she don't win immunity.",1,14,99
+1,Rupert,Rob,One Person,20,1,Dialogue,"Hell yeah, that's the whole goal.",1,6,1
+1,Rob,Tribe,Group,21,1,Dialogue,That's it.,1,2,40.06
+1,Rob,Amber,One Person,22,1,Dialogue,Can it rain any more here?,1,6,40.06
+1,Rob,Amber,One Person,22,2,Dialogue,"Look, there's a bump on it.",1,6,40.06
+1,Amber,Rob,One Person,23,1,Dialogue,Oh yeah.,1,2,40.06
+1,ShiiAnn,Tribe,Group,24,1,Dialogue,"Wow, it's a mask.",1,4,40.06
+1,Amber,Tribe,Group,25,1,Dialogue,"It says ""a no-lose situation, this ones not a race.",1,10,1
+1,Amber,Tribe,Group,25,2,Dialogue,Is everyone a winner?,1,4,99
+1,Amber,Tribe,Group,25,3,Dialogue,Try not to lose face.,1,5,1
+1,Amber,Tribe,Group,25,4,Dialogue,In touch with your own feelings?,1,6,99
+1,Amber,Tribe,Group,25,5,Dialogue,What do your tribe mates think?,1,6,99
+1,Amber,Tribe,Group,25,6,Dialogue,"If you're the last one standing, you'll decide what they eat and drink.""",1,13,99
+1,ShiiAnn,Tribe,Group,26,1,Dialogue,So maybe you get to choose whether or not you want to share food?,1,14,40.06
+1,Alicia,Tribe,Group,27,1,Dialogue,So maybe you choose what everybody eats?,1,7,99
+1,Rupert,Tribe,Group,28,1,Dialogue,I want everybody to eat and drink.,1,7,40.06
+1,Alicia,Camera,Camera,29,1,Dialogue,The rain doesn't let up.,1,5,1
+1,Alicia,Camera,Camera,29,2,Dialogue,We can't fish in these conditions.,1,6,40.06
+1,Alicia,Camera,Camera,29,3,Dialogue,We can't cook in these conditions.,1,6,40.06
+1,Alicia,Camera,Camera,29,4,Dialogue,So we are all hoping we're playing for food.,1,9,99
+1,Rupert,Tribe,Group,30,1,Dialogue,"Try not to lose face, is maybe three chops and your face is smashed and you're out.",1,17,93.56
+1,Tom,Tribe,Group,31,1,Dialogue,I'm hoping food or something but I'm really looking forward to it because it's just a miserable day.,1,18,1
+1,Tom,Tribe,Group,31,2,Dialogue,"ooga, ga, ga, ooga, go, ga.",1,6,40.06
+1,Tom,Tribe,Group,31,3,Dialogue,"hey- a, ho-a, ha.",1,4,40.06
+1,Rob,Tom,One Person,32,1,Dialogue,Dumb ass.,1,2,1
+1,Probst,Tribe,Group,33,1,Dialogue,Rain ponchos coming in handy.,1,5,40.06
+1,Jenna,Tribe,Group,34,1,Dialogue,Amber and I are the same person just slightly different hair.,1,11,1
+1,Alicia,Tribe,Group,35,1,Dialogue,Look at me.,1,3,1
+1,ShiiAnn,Tribe,Group,36,1,Dialogue,I have a very strange expression on our faces.,1,9,92.24
+1,Probst,Tribe,Group,37,1,Dialogue,"All right, let's get to the first part of today's reward challenge.",1,12,84.23
+1,Probst,Tribe,Group,37,2,Dialogue,I'm gonna hand each of you a questionnaire about your fellow tribe mates.,1,13,99
+1,Probst,Tribe,Group,37,3,Dialogue,The idea here is to find out what you really think about each other.,1,14,79.51
+1,Probst,Tribe,Group,37,4,Dialogue,So answer honestly.,1,3,40.06
+1,Probst,Tribe,Group,37,5,Dialogue,Don't discuss your answers with anybody.,1,6,99
+1,Probst,Tribe,Group,37,6,Dialogue,Make sense?,1,2,40.06
+1,Probst,Tribe,Group,37,7,Dialogue,"All right, give you a couple minutes to do this.",1,10,99
+1,Probst,Tribe,Group,37,8,Dialogue,"Find a little spot, step away from each other.",1,9,2.75
+1,Probst,Tribe,Group,37,9,Dialogue,All right guys.,1,3,99
+1,Probst,Tribe,Group,37,10,Dialogue,The results have been tallied.,1,5,40.06
+1,Probst,Tribe,Group,37,11,Dialogue,"I'm going to ask you the same exact questions again, only this time your answers should be based on how you think the majority of the tribe answered.",1,28,99
+1,Probst,Tribe,Group,37,12,Dialogue,"Every time your answer matches what the tribe said, you get to make one chop on a tribe mate's row.",1,20,99
+1,Probst,Tribe,Group,37,13,Dialogue,Three chops release a battering ram and you're out of the game.,1,12,98.75
+1,Probst,Tribe,Group,37,14,Dialogue,Last person left standing wins reward.,1,6,98.75
+1,Probst,Tribe,Group,37,15,Dialogue,The reward is food.,1,4,40.06
+1,Probst,Tribe,Group,37,16,Dialogue,"However, all of you will be picked up by boat and taken to a local Panamanian restaurant.",1,17,73.71
+1,Probst,Tribe,Group,37,17,Dialogue,On the menu are seven items.,1,6,40.06
+1,Amber,Tribe,Group,38,1,Dialogue,Wow.,1,1,40.06
+1,Probst,Tribe,Group,39,1,Dialogue,"Each item increases in value and taste, everything from a bowl of rice and a glass of water from your own camp to a full-on steak dinner with all the fixings.",1,31,76.43
+1,Probst,Tribe,Group,39,2,Dialogue,The winner will be in charge of that menu.,1,9,40.06
+1,Amber,Tribe,Group,40,1,Dialogue,"Oh, my God!",1,3,1
+1,Probst,Tribe,Group,41,1,Dialogue,Here's the rub: You cannot share your meal.,1,8,99
+1,Probst,Tribe,Group,41,2,Dialogue,"Somebody will get a whole lot, and somebody is gonna get very little.",1,13,98.04
+1,Probst,Tribe,Group,41,3,Dialogue,"All right, let's get started.",1,5,99
+1,Probst,Tribe,Group,41,4,Dialogue,First question: who would you trust with your life?,1,9,99
+1,Probst,Tribe,Group,41,5,Dialogue,Everybody reveal.,1,2,99
+1,Probst,Tribe,Group,41,6,Dialogue,The group thought Rob.,1,4,99
+1,Probst,Tribe,Group,41,7,Dialogue,Alicia got it right.,1,4,40.06
+1,Probst,Tribe,Group,41,8,Dialogue,Amber got it right.,1,4,40.06
+1,Probst,Tribe,Group,41,9,Dialogue,"Rob, you didn't even get it right.",1,7,40.06
+1,Probst,Tribe,Group,41,10,Dialogue,Alicia you get the first chop.,1,6,99
+1,Probst,Alicia,One Person,42,1,Dialogue,"Alicia, you get the first chop.",1,6,99
+1,Alicia,Tribe,Group,43,1,Dialogue,"Oh, ShiiAnn, ShiiAnn.",1,3,40.06
+1,ShiiAnn,Tribe,Group,44,1,Dialogue,Surprise.,1,1,40.06
+1,Probst,Amber,One Person,45,1,Dialogue,"Amber, you're up.",1,3,99
+1,Probst,Amber,One Person,45,2,Dialogue,Who's getting the damage?,1,4,99
+1,Amber,Tribe,Group,46,1,Dialogue,I'm going to go for Big Tom since he stole my pot in that one challenge.,1,16,11.66
+1,Probst,Tribe,Group,47,1,Dialogue,Now we're going to get catty.,1,6,99
+1,Probst,Tribe,Group,47,2,Dialogue,Who does not deserve to be an all-star?,1,8,1.71
+1,Probst,Tribe,Group,47,3,Dialogue,Not an easy question to answer in front of each other.,1,11,1
+1,Probst,Tribe,Group,47,4,Dialogue,Reveal.,1,1,40.06
+1,Probst,Tribe,Group,47,5,Dialogue,It was a tie.,1,4,40.06
+1,Probst,Tribe,Group,47,6,Dialogue,ShiiAnn.,1,1,40.06
+1,ShiiAnn,Probst,One Person,48,1,Dialogue,Surprise.,1,1,40.06
+1,Probst,Tribe,Group,49,1,Dialogue,Alicia.,1,1,40.06
+1,Alicia,Probst,One Person,50,1,Dialogue,Nice.,1,1,40.06
+1,Probst,Alicia,One Person,51,1,Dialogue,"Hearing that from the rest of the tribe, what's that make you feel?",1,13,98.04
+1,Alicia,Probst,One Person,52,1,Dialogue,"Yeah, it's a shot in the heart.",1,7,40.06
+1,Alicia,Probst,One Person,52,2,Dialogue,I'll get them all later.,1,5,40.06
+1,Probst,Tribe,Group,53,1,Dialogue,"Well, everybody got it right.",1,5,99
+1,Probst,Tribe,Group,53,2,Dialogue,Everybody gets a chop.,1,4,99
+1,Probst,Tribe,Group,53,3,Dialogue,We'll start on the end and work down.,1,8,99
+1,Alicia,Tribe,Group,54,1,Dialogue,"Well, since my own tribe mates think I don't deserve to be here, Rob, you're going first.",1,17,73.71
+1,Probst,Tribe,Group,55,1,Dialogue,Rob takes a hit.,1,4,40.06
+1,Alicia,Rob,One Person,56,1,Dialogue,How do you like that baby?,1,6,99
+1,Probst,Jenna,One Person,57,1,Dialogue,Jenna?,1,1,40.06
+1,Jenna,Tribe,Group,58,1,Dialogue,I'm going to go with Big Tom.,1,7,1
+1,Probst,Tribe,Group,59,1,Dialogue,Big Tom takes his second hit.,1,6,98.75
+1,Probst,Tribe,Group,59,2,Dialogue,One hit away from being out of the game.,1,9,40.06
+1,Probst,Tribe,Group,59,3,Dialogue,ShiiAnn.,1,1,40.06
+1,Probst,ShiiAnn,One Person,60,1,Dialogue,ShiiAnn.,1,1,40.06
+1,ShiiAnn,Tribe,Group,61,1,Dialogue,Hey Alicia I got to pay you back.,1,8,94.84
+1,Alicia,ShiiAnn,One Person,62,1,Dialogue,All right.,1,2,40.06
+1,Probst,Amber,One Person,63,1,Dialogue,Amber.,1,1,40.06
+1,Amber,Tribe,Group,64,1,Dialogue,I'll go with Jenna.,1,4,1
+1,Probst,Tribe,Group,65,1,Dialogue,Jenna takes her first hit.,1,5,99
+1,Probst,Rupert,One Person,66,1,Dialogue,Rupert.,1,1,40.06
+1,Rupert,Tribe,Group,67,1,Dialogue,I'm sorry ShiiAnn.,1,3,1
+1,Probst,Tribe,Group,68,1,Dialogue,ShiiAnn and Big Tom one hit away from being out of the game.,1,13,40.06
+2,Probst,Tom,One Person,69,1,Dialogue,Big Tom.,1,2,40.06
+2,Tom,Jenna,One Person,70,1,Dialogue,"Jenna, I'll just pay you a favor.",1,7,97.11
+2,Tom,Jenna,One Person,70,2,Dialogue,"Right back to you, baby.",1,5,99
+2,Probst,Tribe,Group,71,1,Dialogue,Jenna takes her second hit.,1,5,99
+2,Probst,Rob,One Person,72,1,Dialogue,"Boston Rob, you could put somebody out of the game if you wanted.",1,13,99
+2,ShiiAnn,Rob,One Person,73,1,Dialogue,Rupert hasn't gotten hit yet.,1,5,1
+2,Probst,Tribe,Group,74,1,Dialogue,Big Tom is our first casualty!,1,6,99
+2,Alicia,Tribe,Group,75,1,Dialogue,That's rotten.,1,2,40.06
+2,Probst,Tom,One Person,76,1,Dialogue,"Have a seat on the bench, Big Tom.",1,8,40.06
+2,Probst,Tom,One Person,76,2,Dialogue,You're out of the game.,1,5,99
+2,Probst,Tribe,Group,77,1,Dialogue,"Next question: ""Who uses sex appeal as a weapon?""",1,9,92.24
+2,Probst,Tribe,Group,77,2,Dialogue,Nobody even hesitating on this one; everybody's flipping quickly.,1,9,40.06
+2,Probst,Tribe,Group,77,3,Dialogue,Reveal.,1,1,40.06
+2,Probst,Tribe,Group,77,4,Dialogue,Everybody says Amber including Amber.,1,5,99
+2,Probst,Amber,One Person,78,1,Dialogue,So you fully own up to using sex appeal.,1,9,99
+2,Amber,Probst,One Person,79,1,Dialogue,I fully own up to it.,1,6,1
+2,Probst,Tribe,Group,80,1,Dialogue,Everybody gets a chop again.,1,5,99
+2,Probst,Alicia,,81,1,Dialogue,"Alicia, you're up.",1,3,99
+2,Alicia,Amber,One Person,82,1,Dialogue,"Amber, since you're going to use it as a weapon, how about.",1,12,98.75
+2,Probst,Tribe,,83,1,Dialogue,Amber going to take her first hit.,1,7,97.11
+2,Probst,Jenna,,84,1,Dialogue,Jenna.,1,1,40.06
+2,Jenna,Tribe,A Group,85,1,Dialogue,And payback.,1,2,40.06
+2,Probst,Tribe,,86,1,Dialogue,Amber takes her second hit.,1,5,99
+2,Probst,ShiiAnn,,87,1,Dialogue,"ShiiAnn, you going to put her out?",1,7,99
+2,ShiiAnn,Tribe,A Group,88,1,Dialogue,This is hard.,1,3,40.06
+2,ShiiAnn,Tribe,A Group,88,2,Dialogue,"Rupert doesn't have one, but",1,5,1
+2,ShiiAnn,Jenna,One Person,89,1,Dialogue,"Jenna, I have to take you out just because.",1,9,92.24
+2,Probst,Tribe,,90,1,Dialogue,"And with that, Jenna was completely beheaded.",1,7,40.06
+2,Probst,Tribe,,90,2,Dialogue,Amber's got some payback.,1,4,40.06
+2,Amber,Alicia,One Person,91,1,Dialogue,"Sorry, Alicia.",1,2,40.06
+2,Alicia,Amber,One Person,92,1,Dialogue,"Hey, it's all right.",1,4,40.06
+2,Probst,Tribe,,93,1,Dialogue,Alicia takes her second hit.,1,5,99
+2,Probst,Rupert,,94,1,Dialogue,"Rupert, why are you laughing?",1,5,99
+2,Rupert,Probst,A Group,95,1,Dialogue,"ShiiAnn, she's got to stop telling people to hit me.",1,10,89.5
+2,Probst,Rupert,,96,1,Dialogue,Uh oh.,1,2,40.06
+2,Probst,Tribe,,97,1,Dialogue,ShiiAnn takes it right between the eyes.,1,7,40.06
+2,Probst,Rob,,98,1,Dialogue,Boston Rob.,1,2,40.06
+2,Rob,Tribe,A Group,99,1,Dialogue,No need in keeping the stragglers around.,1,7,1
+2,Alicia,Rob,One Person,100,1,Dialogue,"All right, go ahead.",1,4,40.06
+2,Probst,Alicia,,101,1,Dialogue,Bye bye Alicia.,1,3,40.06
+2,Probst,Tribe,,102,1,Dialogue,We are down to three.,1,5,99
+2,Probst,Tribe,,102,2,Dialogue,Who is under the false assumption that they are smart?,1,10,99
+2,Probst,Tribe,,102,3,Dialogue,Reveal.,1,1,40.06
+2,Probst,Tribe,,102,4,Dialogue,Amber says Tom.,1,3,40.06
+2,Probst,Tribe,,102,5,Dialogue,Rupert says himself.,1,3,99
+2,Probst,Tribe,,102,6,Dialogue,Boston Rob says Jenna.,1,4,40.06
+2,Probst,Tribe,,102,7,Dialogue,You're all wrong.,1,3,99
+2,Probst,Tribe,,102,8,Dialogue,The group thought Alicia was most under the false assumption that she was smart.,1,14,97.11
+2,Alicia,Probst,A Group,103,1,Dialogue,"I don't like these people anymore, let me tell you something.",1,11,40.06
+2,Probst,Alicia,,104,1,Dialogue,You're taking some hits today.,1,5,99
+2,Alicia,Probst,A Group,105,1,Dialogue,I'm taking some hits today that's alright.,1,7,1
+2,Probst,Tribe,,106,1,Dialogue,Next question.,1,2,40.06
+2,Probst,Tribe,,106,2,Dialogue,Who did the group think was the most honest?,1,9,99
+2,Probst,Tribe,,106,3,Dialogue,Reveal.,1,1,40.06
+2,Probst,Tribe,,106,4,Dialogue,Amber and Rupert say Rupert.,1,5,40.06
+2,Probst,Tribe,,106,5,Dialogue,Rob said himself.,1,3,99
+2,Probst,Tribe,,106,6,Dialogue,"Correct answer, Rupert.",1,3,40.06
+2,Probst,Tribe,,106,7,Dialogue,Amber and Rupert are right.,1,5,40.06
+2,Probst,Amber,,107,1,Dialogue,"Amber, you are up.",1,4,99
+2,Probst,Amber,,107,2,Dialogue,You only have two choices.,1,5,99
+2,Probst,Amber,,107,3,Dialogue,"Boston Rob has taken one hit, Rupert has taken no hits.",1,11,5.27
+2,Jenna,Rob,A Group,108,1,Dialogue,"Sorry, Rob.",1,2,40.06
+2,Probst,Tribe,,109,1,Dialogue,Rob down to his last pop.,1,6,98.75
+2,Probst,Tribe,,109,2,Dialogue,Rupert could put him out of the game right here.,1,10,89.5
+2,Rupert,Probst,A Group,110,1,Dialogue,I have to.,1,3,1
+2,Rob,Rupert,One Person,111,1,Dialogue,You could put her out.,1,5,99
+2,Rupert,Rob,One Person,112,1,Dialogue,I could but Amber didn't hit me.,1,7,1
+2,Probst,Tribe,,113,1,Dialogue,Boston Rob is no more.,1,5,1
+2,Probst,Rob,,114,1,Dialogue,"Boston Rob, have a seat.",1,5,40.06
+2,Probst,Tribe,,115,1,Dialogue,Here's where we're at.,1,4,99
+2,Probst,Rupert,,116,1,Dialogue,"Rupert, you still have three hits left.",1,7,99
+2,Probst,Amber,,117,1,Dialogue,"Amber, you only have one.",1,5,99
+2,Probst,Amber,,117,2,Dialogue,"If Rupert gets this right, he will obliterate you and win the challenge.",1,13,98.04
+2,Probst,Tribe,,118,1,Dialogue,Who never shut's up?,1,4,40.06
+2,Probst,Tribe,,118,2,Dialogue,Reveal.,1,1,40.06
+2,Probst,Tribe,,118,3,Dialogue,You both say Jenna.,1,4,99
+2,Jenna,Tribe,,119,1,Dialogue,Yeah.,1,1,40.06
+2,Probst,Tribe,,120,1,Dialogue,You're both right.,1,3,99
+2,Probst,Amber,,121,1,Dialogue,"Amber, your hit doesn't really matter.",1,6,40.06
+2,Probst,Rupert,,122,1,Dialogue,"Rupert, you get the final honors.",1,6,99
+2,Probst,Rupert,,122,2,Dialogue,Take Amber out.,1,3,40.06
+2,Alicia,Rupert,One Person,123,1,Dialogue,"Nice job, Rupert.",1,3,40.06
+2,Rupert,Tribe,A Group,124,1,Dialogue,"Thank you all, you guys.",1,5,99
+2,Probst,Tribe,,125,1,Dialogue,"Rupert, with that, wins reward.",1,5,40.06
+2,Probst,Rupert,,126,1,Dialogue,"Rupert, you will be in charge of the menu tonight.",1,10,99
+2,Probst,Tribe,,127,1,Dialogue,The boat will come and pick you up.,1,8,99
+2,Probst,Tribe,,127,2,Dialogue,You guys can now head back to camp.,1,8,99
+2,Rupert,Tribe,A Group,128,1,Dialogue,You guys gave that one to me.,1,7,99
+2,Rupert,Tribe,A Group,128,2,Dialogue,I appreciate that one.,1,4,1
+2,Rupert,Tribe,A Group,128,3,Dialogue,"Thank you, guys.",1,3,99
+2,ShiiAnn,Rupert,One Person,129,1,Dialogue,That was awesome.,1,3,40.06
+2,Rob,Camera,,130,1,Dialogue,I think the biggest thing that happened at our reward challenge today was Alicia got all upset again.,1,18,72.07
+2,Rob,Camera,,130,2,Dialogue,She was mocked by the tribe as the person least deserving to be an all-star.,1,15,99
+2,Rob,Camera,,130,3,Dialogue,"Her ego took a blow, but you know, people say things for a reason, so maybe she needs to take a look at herself.",1,24,99
+2,Rob,Tribe,A Group,131,1,Dialogue,I thought they were pretty good.,1,6,40.06
+2,Rob,Tribe,A Group,131,2,Dialogue,"The, uh...",1,2,40.06
+2,Rob,Tribe,A Group,131,3,Dialogue,"the masks, too.",1,3,40.06
+2,Rupert,Tribe,A Group,132,1,Dialogue,I thought the masks were pretty good.,1,7,1
+2,Alicia,Camera,,133,1,Dialogue,"You know it's never fun to hear things about yourself that aren't flattering, and then have to...",1,17,73.71
+2,Alicia,Camera,,133,2,Dialogue,"the same people that said those things, you're stuck with them.",1,11,99
+2,Alicia,Camera,,133,3,Dialogue,That's not fun.,1,3,1
+2,Jenna,Tribe,,134,1,Dialogue,It would be nice to get out of camp tonight.,1,10,40.06
+2,Jenna,Alicia,One Person,135,1,Dialogue,"Alicia, you okay?",1,3,99
+2,Alicia,Jenna,One Person,136,1,Dialogue,"I'm fabulous, baby.",1,3,40.06
+2,Jenna,Alicia,One Person,137,1,Dialogue,"Okay, If it helps I'm a big mouth.",1,8,1
+2,Alicia,Jenna,One Person,138,1,Dialogue,"Yeah, but did everybody say that you don't deserve to be here and that you definitely think you're smart and you're not.",1,22,99
+2,Alicia,Jenna,One Person,138,2,Dialogue,Did people say that about you?,1,6,99
+2,Jenna,Alicia,One Person,139,1,Dialogue,Let's say there's only seven.,1,5,99
+2,Jenna,Alicia,One Person,139,2,Dialogue,Let's say.,1,2,99
+2,Alicia,Jenna,One Person,140,1,Dialogue,"It doesn't matter, dude.",1,4,40.06
+2,Alicia,Jenna,One Person,140,2,Dialogue,It's already been said.,1,4,40.06
+2,Alicia,Jenna,One Person,140,3,Dialogue,Done.,1,1,40.06
+2,Amber,Camera,,141,1,Dialogue,Alicia's very emotional.,1,3,40.06
+2,Amber,Camera,,141,2,Dialogue,"And when something upsets her, she becomes a huge grump around the camp.",1,13,98.04
+2,Amber,Camera,,141,3,Dialogue,She's just being a big baby about it.,1,8,99
+2,Amber,Camera,,141,4,Dialogue,People are observing it.,1,4,99
+2,Amber,Camera,,141,5,Dialogue,People are getting annoyed with it.,1,6,98.75
+2,Amber,Camera,,141,6,Dialogue,People will vote you out sooner because they don't want to live with it.,1,14,99
+2,Alicia,Jenna,One Person,142,1,Dialogue,"Don't, don't, don't, don't.",1,4,1
+2,Jenna,Alicia,One Person,143,1,Dialogue,"I know you don't want somebody to talk to you, but I'm a mom, its my job.",1,17,73.71
+2,Alicia,Jenna,One Person,144,1,Dialogue,"Yeah, but you know what?",1,5,99
+2,Alicia,Jenna,One Person,144,2,Dialogue,"You're not my mom, so it's all good.",1,8,40.06
+2,Alicia,Jenna,One Person,145,1,Dialogue,But you're hurt.,1,3,99
+2,Jenna,Alicia,One Person,146,1,Dialogue,"Well, you know what?",1,4,99
+2,Jenna,Alicia,One Person,146,2,Dialogue,That's just the way it goes.,1,6,40.06
+2,Alicia,Camera,,147,1,Dialogue,I don't want anybody hugging me or touching me or trying to ...,1,12,1
+2,Alicia,Camera,,147,2,Dialogue,Leave me alone.,1,3,1
+2,Alicia,Camera,,147,3,Dialogue,The only person that tried to not give me my space was Jenna.,1,13,1
+2,Alicia,Camera,,147,4,Dialogue,Jenna's trying to put her arm around me.,1,8,40.06
+2,Alicia,Camera,,147,5,Dialogue,Give me a break.,1,4,1
+2,Alicia,Camera,,147,6,Dialogue,Jenna and I have no connection at all.,1,8,1
+2,Alicia,Camera,,147,7,Dialogue,"I mean, she's probably one of the people that voted that way anyway.",1,13,81.78
+2,Alicia,Camera,,147,8,Dialogue,So she needs to save it.,1,6,98.75
+2,Alicia,Camera,,147,9,Dialogue,"Jenna would be the last person that I would go to for consoling, the last person.",1,16,75.49
+2,Jenna,Rupert,One Person,148,1,Dialogue,"Listen, I know you got a really big decision, and I know you're the most generous person out here, probably.",1,20,97.73
+2,Jenna,Rupert,One Person,148,2,Dialogue,And just know that we understand where your position is.,1,10,99
+2,Jenna,Rupert,One Person,148,3,Dialogue,But I'd like to have the choice is all I'm asking.,1,11,1
+2,Rupert,Jenna,One Person,149,1,Dialogue,Okay.,1,1,40.06
+2,Rupert,Jenna,One Person,149,2,Dialogue,That's a great idea.,1,4,40.06
+2,Jenna,Rupert,One Person,150,1,Dialogue,"Like if you said, ""This is my decision for the order,"" and then just give us choices.",1,17,93.56
+2,Rupert,Jenna,One Person,151,1,Dialogue,That's a great idea.,1,4,40.06
+2,Rupert,Camera,,152,1,Dialogue,"You know, that's almost a challenge I wish I didn't win.",1,11,1
+2,Rupert,Camera,,152,2,Dialogue,"This is what killed me on Pearl Islands was, I let the pecking order be known and then I was the next one gone.",1,24,1.71
+2,Jenna,Rupert,One Person,153,1,Dialogue,"But don't be a martyr and be like, ""I'm going to take the smallest one and put everyone else above me 'cause you need to be strong, too, okay?",1,29,9.86
+2,Jenna,Rupert,One Person,153,2,Dialogue,I just don't think you should give away your big one.,1,11,99
+2,Jenna,Camera,,154,1,Dialogue,"I love Rupert, but strategy-wise he is...",1,7,1
+2,Jenna,Camera,,154,2,Dialogue,"I don't want to say not good at the game, he is, but he needs some coaching.",1,17,1
+2,Rupert,Jenna,One Person,155,1,Dialogue,Seven of us.,1,3,99
+2,Jenna,Rupert,One Person,156,1,Dialogue,I do say ShiiAnn gets the rice.,1,7,1
+2,Rupert,Jenna,One Person,157,1,Dialogue,ShiiAnn gets the rice.,1,4,40.06
+2,Jenna,Rupert,One Person,158,1,Dialogue,"But I think we keep ourselves strong, us four.",1,9,99
+2,Jenna,Rupert,One Person,158,2,Dialogue,We have the numbers.,1,4,99
+2,Rupert,Jenna,One Person,159,1,Dialogue,They can't hurt us.,1,4,99
+2,Jenna,Rupert,One Person,160,1,Dialogue,"No, they can't.",1,3,1
+2,Rupert,Camera,,161,1,Dialogue,This adventure is geared to create hard feelings between people.,1,10,89.5
+3,Rupert,Camera,,162,1,Dialogue,I hate being that person that creates the hard feelings.,1,10,40.06
+3,Probst,Tribe,,163,1,Dialogue,Come on in guys!,1,4,99
+3,Probst,Tribe,,163,2,Dialogue,Welcome to the Romantica Restaurant.,1,5,40.06
+3,Rupert,Probst,,164,1,Dialogue,Thank you.,1,2,99
+3,Probst,Rupert,,165,1,Dialogue,"Rupert, you're at the head of the table.",1,8,99
+3,Rupert,Probst,,166,1,Dialogue,Cool.,1,1,40.06
+3,Probst,Tribe,,167,1,Dialogue,Everybody else head in this way and take a seat.,1,10,40.06
+3,Probst,Rupert,,168,1,Dialogue,"So, Rupert, it's your reward.",1,5,99
+3,Probst,Rupert,,168,2,Dialogue,"Good news is, you get your first choice of anything here you want.",1,13,99
+3,Probst,Rupert,,168,3,Dialogue,"We got a big piece of steak, shrimp, all the fixings.",1,11,99
+3,Probst,Rupert,,168,4,Dialogue,"The bad news is, you have to allocate the rest and somebody's going to end up with a very cold bowl of rice and water from your own camp.",1,29,99
+3,Probst,Rupert,,168,5,Dialogue,"So, let me go over the rest of your choices.",1,10,40.06
+3,Probst,Rupert,,168,6,Dialogue,We have potatoes with tap water.,1,6,99
+3,Probst,Rupert,,168,7,Dialogue,Then we have a salad with tap water that's been chilled.,1,11,99
+3,Probst,Rupert,,168,8,Dialogue,And we have a ham and cheese sandwich with some sparkling water and a little bit of lemon.,1,18,92.24
+3,Probst,Rupert,,168,9,Dialogue,"We also have a hot dog, sauerkraut, and orange juice.",1,10,99
+3,Probst,Rupert,,168,10,Dialogue,Then we have a big cheeseburger and French fry plate.,1,10,99
+3,Probst,Rupert,,168,11,Dialogue,"So, you can start with yourself.",1,6,99
+3,Probst,Rupert,,168,12,Dialogue,You can start anywhere you want.,1,6,99
+3,Rupert,Probst,A Group,169,1,Dialogue,I'm going to start with me and I'm taking the steak.,1,11,1
+3,Probst,Rupert,,170,1,Dialogue,All right.,1,2,40.06
+3,Rupert,Probst,A Group,171,1,Dialogue,Thank you sir.,1,3,99
+3,Probst,Rupert,,172,1,Dialogue,"Along with the steak, open bar, for you only.",1,9,99
+3,Probst,Rupert,,172,2,Dialogue,You just tell him what you want to drink and he'll keep refilling it.,1,14,99
+3,Rupert,Server,,173,1,Dialogue,We'll start with a cerveza.,1,5,99
+3,Probst,Rupert,,174,1,Dialogue,All right.,1,2,40.06
+3,Probst,Tribe,,175,1,Dialogue,Rupert's starting with a beer.,1,5,40.06
+3,Probst,Tribe,,175,2,Dialogue,"So, this is on you.",1,5,99
+3,Probst,Tribe,,175,3,Dialogue,It's your menu.,1,3,99
+3,Probst,Tribe,,175,4,Dialogue,You're going to distribute it.,1,5,99
+3,Rupert,Tribe,,176,1,Dialogue,I would like Rob to choose next.,1,7,1
+3,Rob,Tribe,A Group,177,1,Dialogue,"I'll have the burger, please.",1,5,1
+3,Probst,Rob,,178,1,Dialogue,One ice-cold cola and the burger.,1,6,40.06
+3,Rupert,Tribe,A Group,179,1,Dialogue,I'd like Jenna to choose next.,1,6,1
+3,Jenna,Tribe,A Group,180,1,Dialogue,Hot dog and orange juice.,1,5,40.06
+3,Probst,Rupert,,181,1,Dialogue,Going right down the line.,1,5,40.06
+3,Probst,Jenna,,182,1,Dialogue,Orange juice.,1,2,40.06
+3,Rupert,Tribe,A Group,183,1,Dialogue,I would like Amber to choose next.,1,7,1
+3,Amber,Tribe,A Group,184,1,Dialogue,I'll have the sandwich.,1,4,1
+3,Probst,Amber,,185,1,Dialogue,"Ham and cheese sandwich, sparkling water.",1,6,40.06
+3,Probst,Rupert,,186,1,Dialogue,"All right, Rupert, three items left.",1,6,40.06
+3,Rupert,Alicia,A Group,187,1,Dialogue,Alicia?,1,1,40.06
+3,Alicia,Tribe,A Group,188,1,Dialogue,I would love the salad.,1,5,1
+3,Probst,Alicia,,189,1,Dialogue,Salad and cold water.,1,4,40.06
+3,Alicia,Probst,,190,1,Dialogue,Thank you.,1,2,99
+3,Alicia,Tribe,A Group,191,1,Dialogue,I probably would have chose that.,1,6,1
+3,Rupert,Alicia,,192,1,Dialogue,Good.,1,1,40.06
+3,Rupert,Alicia,,192,2,Dialogue,Very good.,1,2,40.06
+3,Probst,Alicia,,193,1,Dialogue,That worked out.,1,3,40.06
+3,Alicia,Probst,,194,1,Dialogue,That worked out perfectly for me!,1,6,1
+3,Rupert,Tom,One Person,195,1,Dialogue,"Big Tom, what do you want?",1,6,99
+3,Probst,Tribe,,196,1,Dialogue,Big Tom picks next.,1,4,40.06
+3,Tom,Probst,A Group,197,1,Dialogue,"Whatever, what is that?",1,4,40.06
+3,Tom,Probst,A Group,197,2,Dialogue,I'll eat some potatoes.,1,4,1
+3,Tom,Probst,A Group,197,3,Dialogue,"Potatoes, yeah.",1,2,40.06
+3,Probst,Tom,,198,1,Dialogue,Potatoes?,1,1,40.06
+3,ShiiAnn,Tribe,A Group,199,1,Dialogue,Leave the Asian girl with the rice.,1,7,97.11
+3,Rupert,ShiiAnn,,200,1,Dialogue,Yeah.,1,1,40.06
+3,Tom,Camera,,201,1,Dialogue,We went to one of the fanciest restaurants.,1,8,99
+3,Tom,Camera,,201,2,Dialogue,They said it was five-star.,1,5,99
+3,Rupert,Tom,One Person,202,1,Dialogue,Please don't stab me.,1,4,1
+3,Tom,Camera,,203,1,Dialogue,But I wouldn't hit a dog in the hind end with it 'cause I got a tater and it was cold.,1,21,1
+3,Rupert,ShiiAnn,,204,1,Dialogue,"ShiiAnn, our camp.",1,3,99
+3,Probst,ShiiAnn,,205,1,Dialogue,Camp water and cold rice.,1,5,40.06
+3,ShiiAnn,Tribe,A Group,206,1,Dialogue,"I hope it's boiled, both the rice and the camp water.",1,11,5.27
+3,Probst,Tribe,,207,1,Dialogue,"A little bit of an awkward dinner, but it's a dinner nonetheless.",1,12,1
+3,Alicia,Tribe,,208,1,Dialogue,Thank god.,1,2,40.06
+3,Probst,Tribe,,209,1,Dialogue,You're warm for a little while.,1,6,99
+3,Probst,Tribe,,209,2,Dialogue,I'll get out of your hair.,1,6,98.75
+3,Probst,Tribe,,209,3,Dialogue,Bon appetit.,1,2,40.06
+3,Rupert,Probst,,210,1,Dialogue,"Thank you, Jeff.",1,3,99
+3,ShiiAnn,Rupert,One Person,211,1,Dialogue,This camp water tastes better out here because of the romantic lighting.,1,12,40.06
+3,Rupert,ShiiAnn,One Person,212,1,Dialogue,Good.,1,1,40.06
+3,Rob,Camera,,213,1,Dialogue,"You saw the people that ended up with fifth, sixth, and seventh weren't too happy about the politics that were involved, but hey, what can you do about that?",1,29,78.45
+3,Rob,Camera,,213,2,Dialogue,"You win some, you lose some.",1,6,99
+3,ShiiAnn,Rob,One Person,214,1,Dialogue,Those fries look so good.,1,5,40.06
+3,Rupert,Server,,215,1,Dialogue,"Thank you, sir.",1,3,99
+3,ShiiAnn,Tribe,A Group,216,1,Dialogue,I'm chewing my rice and thinking that I'm eating that piece of steak that Rupert's holding in his hands.,1,19,3.34
+3,Rupert,Tribe,A Group,217,1,Dialogue,I can't even look up at you guys.,1,8,40.06
+3,ShiiAnn,Rupert,One Person,218,1,Dialogue,Don't look up.,1,3,1
+3,ShiiAnn,Rupert,One Person,218,2,Dialogue,Just eat.,1,2,40.06
+3,Jenna,Rupert,,219,1,Dialogue,Yeah you don't need to look at us.,1,8,99
+3,Jenna,Camera,,220,1,Dialogue,ShiiAnn's an absolutely obnoxious person.,1,5,99
+3,Jenna,Camera,,220,2,Dialogue,"The whole time she's like, ""this rice is good.",1,9,92.24
+3,Jenna,Camera,,220,3,Dialogue,"Oh, my gosh, ooh, look at that steak, I just want to watch you eat it.""",1,16,40.06
+3,ShiiAnn,Rupert,One Person,221,1,Dialogue,If only I could have a piece of that steak.,1,10,1
+3,Rupert,ShiiAnn,A Group,222,1,Dialogue,I wish I could give you guys all some.,1,9,92.24
+3,ShiiAnn,Rupert,One Person,223,1,Dialogue,I know.,1,2,1
+3,Jenna,Camera,,224,1,Dialogue,Shut up!,1,2,40.06
+3,Jenna,Camera,,224,2,Dialogue,It's obnoxious!,1,2,40.06
+3,Rupert,Server,,225,1,Dialogue,"Thank you, sir.",1,3,99
+3,Rupert,Tom,One Person,226,1,Dialogue,Big Tom.,1,2,40.06
+3,Rupert,Tom,One Person,226,2,Dialogue,I'm drinking this for you.,1,5,99
+3,Alicia,Camera,,227,1,Dialogue,So the dinner was nice.,1,5,40.06
+3,Alicia,Camera,,227,2,Dialogue,"And Rupert, of course, had eight or nine beers and he was plastered.",1,13,40.06
+3,Alicia,Camera,,227,3,Dialogue,Plastered!,1,1,40.06
+3,Rupert,Server,,228,1,Dialogue,"Thank you, sir.",1,3,99
+3,Jenna,Tribe,A Group,229,1,Dialogue,Smell your napkin.,1,3,99
+3,Amber,Tribe,A Group,230,1,Dialogue,It's so nice and soft.,1,5,40.06
+3,Amber,Tribe,A Group,230,2,Dialogue,I'm taking- We're taking advantage of this.,1,7,97.11
+3,Rupert,Amber,A Group,231,1,Dialogue,Good.,1,1,40.06
+3,Rob,Rupert,One Person,232,1,Dialogue,Rupert keep drinking.,1,3,40.06
+3,Rupert,Rob,One Person,233,1,Dialogue,Okay.,1,1,40.06
+3,Amber,Camera,,234,1,Dialogue,"We really wanted to stay at the restaurant for as long as we possibly could, 'cause we just dreaded coming back here with all the bugs and the really long night.",1,31,99
+3,Amber,Camera,,234,2,Dialogue,"So we told Rupert, ""Keep drinking as much as you want.""",1,11,99
+3,Amber,Camera,,234,3,Dialogue,We're just going to lay here on the table and use these napkins as pillows and enjoy it.,1,18,92.24
+3,Tom,Tribe,A Group,235,1,Dialogue,Rupert's a happy man.,1,4,99
+3,Rob,Camera,,236,1,Dialogue,"Basically, Rupert exposed our alliance of four.",1,7,99
+3,Rob,Camera,,236,2,Dialogue,"It was pretty evident, uh, as to who got what food.",1,11,86.82
+3,Rob,Camera,,236,3,Dialogue,"He's kind of sticking it in their face, which kind of shows me that he does trust myself and Amber to a degree.",1,23,40.06
+3,Rob,Tribe,Two People,237,1,Dialogue,Chaboga Mogo.,1,2,40.06
+3,Rob,Tribe,Two People,237,2,Dialogue,"Chaboga Mogo- The sun is out, and we're going to have a beautiful day.",1,14,97.11
+3,Jenna,Tribe,Two People,238,1,Dialogue,We are going to have a beautiful day.,1,8,99
+3,Rob,Tribe,Two People,239,1,Dialogue,We're gonna kick ShiiAnn's ass off.,1,6,98.75
+3,Rob,Tribe,Two People,239,2,Dialogue,We won't have to listen to her anymore.,1,8,99
+3,ShiiAnn,Rupert,One Person,240,1,Dialogue,I'm going to try so hard at the immunity today.,1,10,3.95
+3,Rupert,ShiiAnn,One Person,241,1,Dialogue,"I'm going to battle 'cause I got to, but I'm not going to kill myself to win 'cause I hope that I'm not on the chopping block.",1,27,1
+3,ShiiAnn,Rupert,One Person,242,1,Dialogue,I don't think you are.,1,5,40.06
+3,Rupert,ShiiAnn,One Person,243,1,Dialogue,"And, I wouldn't mind seeing you win immunity.",1,8,40.06
+3,ShiiAnn,Rupert,One Person,244,1,Dialogue,You got to be looking at Rob.,1,7,99
+3,ShiiAnn,Rupert,One Person,244,2,Dialogue,I would be if I were you.,1,7,1
+3,ShiiAnn,Rupert,One Person,244,3,Dialogue,"If I were anyone here, I would be looking at Rob.",1,11,1
+3,Rupert,ShiiAnn,One Person,245,1,Dialogue,Oh my gosh I've already talked to Jenna about that.,1,10,1
+3,ShiiAnn,Rupert,One Person,246,1,Dialogue,Of course you have.,1,4,99
+3,Rupert,ShiiAnn,One Person,247,1,Dialogue,"But they're telling me they'll take me to the final four, too, but I know I'll be fourth unless I win immunity.",1,22,1
+3,ShiiAnn,Rupert,One Person,248,1,Dialogue,There are people here that would switch their vote tonight if they felt like they had the majority.,1,18,98.75
+3,Rupert,ShiiAnn,One Person,249,1,Dialogue,Yeah.,1,1,40.06
+3,ShiiAnn,Rupert,One Person,250,1,Dialogue,We know that.,1,3,99
+3,Rupert,ShiiAnn,One Person,251,1,Dialogue,I know that.,1,3,1
+3,ShiiAnn,Rupert,One Person,252,1,Dialogue,There are people here.,1,4,99
+3,Tom,Alicia,One Person,253,1,Dialogue,Let me..,1,2,1
+3,Tom,Alicia,One Person,253,2,Dialogue,hand me...,1,2,1
+3,Tom,Alicia,One Person,253,3,Dialogue,while you're over.,1,3,99
+3,Tom,Alicia,One Person,253,4,Dialogue,give me that solid piece.,1,5,1
+3,Tom,Alicia,One Person,253,5,Dialogue,See that good little piece right here?,1,7,40.06
+3,Alicia,Tom,One Person,254,1,Dialogue,Yep.,1,1,40.06
+3,Alicia,Tom,One Person,254,2,Dialogue,"So, uh...who's up on the...?",1,6,98.75
+3,Tom,Alicia,One Person,255,1,Dialogue,Chop Block?,1,2,40.06
+3,Alicia,Tom,One Person,256,1,Dialogue,Yep.,1,1,40.06
+3,Tom,Alicia,One Person,257,1,Dialogue,It's him before ShiiAnn.,1,4,99
+4,Alicia,Tom,One Person,258,1,Dialogue,Rupert before ShiiAnn.,1,3,40.06
+4,Alicia,Tom,One Person,258,2,Dialogue,I was thinking that today.,1,5,1
+4,Alicia,Tom,One Person,258,3,Dialogue,"I was looking at everybody today, and I was kind of sizing up.",1,13,7.93
+4,Tom,Alicia,One Person,259,1,Dialogue,"All I'm saying, we got...",1,5,99
+4,Tom,Alicia,One Person,259,2,Dialogue,"me and you got to stick together, Alicia.",1,8,94.84
+4,Alicia,Tom,One Person,260,1,Dialogue,Absolutely.,1,1,40.06
+4,Alicia,Tom,One Person,260,2,Dialogue,"And I'll tell you what, though if either one of us are up against Amber or Boston Rob we're in trouble",1,21,40.06
+4,Tom,Alicia,One Person,261,1,Dialogue,But you know as well as I do me and you are the lone horse here.,1,16,75.49
+4,Alicia,Tom,One Person,262,1,Dialogue,Yep.,1,1,40.06
+4,Alicia,Tom,One Person,262,2,Dialogue,And those two are going to stick together no matter what.,1,11,5.27
+4,Tom,Alicia,One Person,263,1,Dialogue,They're lovers.,1,2,99
+4,Alicia,Tom,One Person,264,1,Dialogue,I know.,1,2,1
+4,Tom,Alicia,One Person,265,1,Dialogue,But you know what?,1,4,99
+4,Tom,Alicia,One Person,265,2,Dialogue,We may have not slept together but we...,1,8,94.84
+4,Tom,Alicia,One Person,265,3,Dialogue,we snuggled pretty close.,1,4,99
+4,Alicia,Tom,One Person,266,1,Dialogue,That's right.,1,2,40.06
+4,Rob,Tom,One Person,267,1,Dialogue,Here's the thing if ShiiAnn wins immunity today.,1,8,1.71
+4,Alicia,Camera,,268,1,Dialogue,"We decided, Big Tom, Rob, Amber, and myself, that we were going to stay together to the very end.",1,19,98.27
+4,Alicia,Camera,,268,2,Dialogue,That's four people.,1,3,99
+4,Alicia,Camera,,268,3,Dialogue,"So no matter what happens in this tribe, we are four to the other three.",1,15,77.41
+4,Alicia,Camera,,268,4,Dialogue,Then there's Big Tom.,1,4,40.06
+4,Alicia,Camera,,268,5,Dialogue,"He came to me and said, you know, ""I can't sit next to Boston Rob or Amber.",1,17,2.18
+4,Alicia,Camera,,268,6,Dialogue,I'll never win.,1,3,1
+4,Alicia,Camera,,268,7,Dialogue,"Maybe I should sit next to you.""",1,7,97.11
+4,Alicia,Camera,,268,8,Dialogue,"And I said, ""You know what?",1,6,98.75
+4,Alicia,Camera,,268,9,Dialogue,"Maybe you're right.""",1,3,99
+4,Alicia,Camera,,268,10,Dialogue,But I didn't make any deal with him.,1,8,1
+4,Alicia,Camera,,268,11,Dialogue,"The only person I have an alliance with at this point is Boston Rob, and we shook on it.",1,19,98.27
+4,Alicia,Camera,,268,12,Dialogue,But do I trust him?,1,5,1
+4,Alicia,Camera,,268,13,Dialogue,Absolutely not.,1,2,1
+4,Rob,Tom,,269,1,Dialogue,Here's the thing.,1,3,40.06
+4,Rob,Tom,,269,2,Dialogue,If ShiiAnn wins immunity today.,1,5,1
+4,Tom,Rob,One Person,270,1,Dialogue,It'd be a miracle.,1,4,40.06
+4,Rob,Tom,One Person,271,1,Dialogue,"Yeah I know, but still, we have to decide.",1,9,40.06
+4,Tom,Rob,One Person,272,1,Dialogue,"Rob, let's just face it it's gonna hurt you more than it will me.",1,14,97.11
+4,Tom,Rob,One Person,272,2,Dialogue,You got a better chance at winning than I have.,1,10,40.06
+4,Rob,Tom,One Person,273,1,Dialogue,"I need to win, like almost every one, Tom.",1,9,2.75
+4,Rob,Tom,One Person,273,2,Dialogue,I know what people think around the camp.,1,8,40.06
+4,Rob,Tom,One Person,273,3,Dialogue,"I know even though Rupert pretends he's all nice - last night he gave me a hamburger - I can read beyond that, you know?",1,23,40.06
+4,Rob,Camera,,274,1,Dialogue,If ShiiAnn wins immunity I don't know who we're gonna kick off.,1,12,40.06
+4,Tom,Rob,One Person,275,1,Dialogue,You're worried about ShiiAnn.,1,4,99
+4,Tom,Rob,One Person,275,2,Dialogue,I'm worried about Rupert.,1,4,1
+4,Tom,Rob,One Person,275,3,Dialogue,Because he's the one that's gonna beat you in an immunity.,1,11,99
+4,Tom,Rob,One Person,275,4,Dialogue,ShiiAnn ain't gonna beat you.,1,5,40.06
+4,Rob,Tom,One Person,276,1,Dialogue,All right.,1,2,40.06
+4,Tom,Rob,One Person,277,1,Dialogue,"Uh, Alicia ain't gonna beat you.",1,6,40.06
+4,Tom,Rob,One Person,277,2,Dialogue,But we can't beat Rupert.,1,5,1
+4,Tom,Rob,One Person,277,3,Dialogue,"You're gonna come close, but he's gonna beat you before it's over.",1,12,99
+4,Rob,Tom,One Person,278,1,Dialogue,Right.,1,1,40.06
+4,Tom,Rob,One Person,279,1,Dialogue,"And then when he does, you know who they want to get rid of?",1,14,99
+4,Tom,Rob,One Person,279,2,Dialogue,It ain't gonna be me,1,5,1
+4,Rob,Tom,One Person,280,1,Dialogue,"No, it'll be me.",1,4,1
+4,Tom,Rob,One Person,281,1,Dialogue,It's you.,1,2,99
+4,ShiiAnn,Alicia,One Person,282,1,Dialogue,"Yeah, we should talk, actually I have some news.",1,9,92.24
+4,Alicia,ShiiAnn,One Person,283,1,Dialogue,I don't want to even hear it.,1,7,1
+4,Alicia,ShiiAnn,One Person,283,2,Dialogue,Honestly.,1,1,40.06
+4,ShiiAnn,Alicia,One Person,284,1,Dialogue,That's fine.,1,2,40.06
+4,Alicia,ShiiAnn,One Person,285,1,Dialogue,"There is a plan, ShiiAnn and it's too late for anything to change.",1,13,40.06
+4,ShiiAnn,Alicia,One Person,286,1,Dialogue,"Okay, I appreciate that.",1,4,1
+4,Alicia,ShiiAnn,One Person,287,1,Dialogue,Yep.,1,1,40.06
+4,Probst,Tribe,,288,1,Dialogue,There's no denying it - we are getting down to it.,1,10,89.5
+4,Probst,Tribe,,288,2,Dialogue,There are seven of you left.,1,6,99
+4,Probst,Tribe,,288,3,Dialogue,Today's challenge is for immunity.,1,5,40.06
+4,Probst,Tribe,,288,4,Dialogue,Very important at this stage of the game.,1,8,40.06
+4,Probst,Tribe,,288,5,Dialogue,It's a very simple immunity challenge.,1,6,40.06
+4,Probst,Tribe,,288,6,Dialogue,You're gonna step up on a log.,1,7,99
+4,Probst,Tribe,,288,7,Dialogue,You're gonna raise your hand over your head.,1,8,99
+4,Probst,Tribe,,288,8,Dialogue,Your hand is gonna be tethered to a bucket.,1,9,99
+4,Probst,Tribe,,288,9,Dialogue,That bucket's full of water.,1,5,40.06
+4,Probst,Tribe,,288,10,Dialogue,"When you drop your hand, the bucket tips, you get wet, you're done.",1,13,99
+4,Probst,Tribe,,288,11,Dialogue,"If you need immunity, the only thing stopping you from getting it is quitting, and that's it.",1,17,99
+4,Probst,Tribe,,288,12,Dialogue,We got all day to sit out here.,1,8,99
+4,Probst,Rob,,289,1,Dialogue,"All right, Boston Rob, give it up.",1,7,40.06
+4,Probst,Tribe,,290,1,Dialogue,The all-important immunity is back up for grabs.,1,8,40.06
+4,Probst,Tribe,,290,2,Dialogue,Take your spots.,1,3,99
+4,Probst,Tribe,,290,3,Dialogue,I'll lock you in.,1,4,99
+4,Probst,Tribe,,290,4,Dialogue,For immunity.,1,2,40.06
+4,Probst,Tribe,,290,5,Dialogue,"Everybody's locked in, and this challenge is officially on.",1,9,92.24
+4,Probst,Tribe,,290,6,Dialogue,There'll be a little initial pain.,1,6,40.06
+4,Probst,Tribe,,290,7,Dialogue,You'll work through that.,1,4,99
+4,Probst,Tribe,,290,8,Dialogue,"Just remember, there's not a lot of slack in that chain, so if you drop your hand two inches, you're done.",1,21,97.11
+4,Probst,Tribe,,290,9,Dialogue,You have very little wiggle room in this challenge.,1,9,99
+4,Probst,Tribe,,290,10,Dialogue,Amber's first out.,1,3,40.06
+4,Probst,Amber,,291,1,Dialogue,Grab a seat on the bench.,1,6,40.06
+4,Jenna,Tribe,,292,1,Dialogue,I didn't even move!,1,4,1
+4,Probst,Tribe,,293,1,Dialogue,Jenna's out of the game.,1,5,40.06
+4,ShiiAnn,Jenna,A Group,294,1,Dialogue,You didn't need that immunity anyway.,1,6,40.06
+4,ShiiAnn,Jenna,A Group,294,2,Dialogue,It's all good.,1,3,40.06
+4,Jenna,ShiiAnn,One Person,295,1,Dialogue,Nobody knows who's safe.,1,4,40.06
+4,ShiiAnn,Jenna,A Group,296,1,Dialogue,"I know I'm not safe, that's for sure.",1,8,1
+4,Probst,Jenna,,297,1,Dialogue,Have a seat next to Amber.,1,6,40.06
+4,Probst,Tom,,298,1,Dialogue,"Big Tom, you're struggling.",1,4,99
+4,ShiiAnn,Tom,,299,1,Dialogue,"Oh, Big Tom!",1,3,40.06
+4,Probst,Tribe,,300,1,Dialogue,"Big Tom, third person to hit the dust.",1,8,94.84
+4,ShiiAnn,Rupert,One Person,301,1,Dialogue,"Okay, Rupert you got to hold out before Rob.",1,9,99
+4,ShiiAnn,Rupert,One Person,301,2,Dialogue,We can't let Rob keep winning those immunities,1,8,40.06
+4,Probst,Tribe,,302,1,Dialogue,Big Tom's out of the challenge.,1,6,40.06
+4,Rupert,ShiiAnn,A Group,303,1,Dialogue,Damn straight.,1,2,1
+4,Probst,Tom,,304,1,Dialogue,"Have a seat next to the ladies, Big Tom.",1,9,92.24
+4,Probst,Tom,,304,2,Dialogue,You're out of the challenge.,1,5,99
+4,Jenna,Tribe,A Group,305,1,Dialogue,"I see ShiiAnn's arm moving a bit, so you guys are good.",1,12,98.75
+4,Probst,Jenna,,306,1,Dialogue,"So Jenna, I take it from that comment there's just no secrets in this tribe right now.",1,17,12.77
+4,Jenna,Probst,,307,1,Dialogue,No.,1,1,1
+4,Jenna,Probst,,307,2,Dialogue,"No, there isn't.",1,3,1
+4,ShiiAnn,Tribe,A Group,308,1,Dialogue,"Oh, there are secrets to this tribe.",1,7,97.11
+4,ShiiAnn,Tribe,A Group,308,2,Dialogue,"No secret on who they want out tonight, but there's secrets to this tribe.",1,14,79.51
+4,Probst,Tribe,,309,1,Dialogue,Alicia fighting through a little pain.,1,6,40.06
+4,Rupert,Alicia,One Person,310,1,Dialogue,Be strong Alicia.,1,3,40.06
+4,Probst,Tribe,,311,1,Dialogue,First sign of weakness we've seen from Alicia on this.,1,10,99
+4,Probst,Tribe,,311,2,Dialogue,"Fight, guys.",1,2,99
+4,Probst,Tribe,,311,3,Dialogue,It's all about this right here.,1,6,40.06
+4,Probst,Tribe,,311,4,Dialogue,That sound around your neck.,1,5,99
+4,Probst,Tribe,,311,5,Dialogue,It means you're in this game a little longer.,1,9,99
+4,Probst,Tribe,,311,6,Dialogue,It means you've got a one-in-six shot at a million bucks.,1,11,99
+4,Probst,Tribe,,311,7,Dialogue,Somebody gonna leave here with this.,1,6,98.75
+4,Probst,Tribe,,311,8,Dialogue,The person who wants it the most.,1,7,99
+4,Probst,Tribe,,311,9,Dialogue,"Fight it, guys, fight it.",1,5,99
+4,Probst,Tribe,,311,10,Dialogue,Oh!,1,1,40.06
+4,Probst,Tribe,,311,11,Dialogue,Whew!,1,1,40.06
+4,Probst,Tribe,,311,12,Dialogue,I got a little of that too!,1,7,1
+4,Alicia,Probst,One Person,312,1,Dialogue,All right I'm glad.,1,4,1
+4,Alicia,Probst,One Person,312,2,Dialogue,"At least if I went down, I took you with me.",1,11,1
+4,Probst,Alicia,,313,1,Dialogue,I couldn't be happier.,1,4,1
+4,ShiiAnn,Rupert,One Person,314,1,Dialogue,"Keep your arm up, Rupert.",1,5,99
+4,ShiiAnn,Rupert,One Person,314,2,Dialogue,Keep your arm up.,1,4,99
+4,Rupert,ShiiAnn,A Group,315,1,Dialogue,I'm damn straight trying.,1,4,1
+4,Probst,Tribe,,316,1,Dialogue,And then there were three.,1,5,40.06
+4,Probst,Tribe,,316,2,Dialogue,All three looking really strong.,1,5,40.06
+4,Probst,Tribe,,316,3,Dialogue,"A little bit of rain starting to come down, cool you off a little.",1,14,97.11
+4,Probst,Tribe,,316,4,Dialogue,Wouldn't be a day on Survivor All-Stars if we didn't get a little rain.,1,14,1
+4,Probst,Tribe,,316,5,Dialogue,Immunity is most definitely up for grabs.,1,7,40.06
+4,Probst,Tribe,,316,6,Dialogue,Three people left.,1,3,99
+4,Probst,Tribe,,316,7,Dialogue,Anybody could get it.,1,4,99
+4,Probst,ShiiAnn,,317,1,Dialogue,"ShiiAnn, I have to say, one hour in, you have not moved.",1,12,6.61
+4,Probst,ShiiAnn,,317,2,Dialogue,"Your body has not moved, your arm has not dipped.",1,10,40.06
+4,ShiiAnn,Tribe,A Group,318,1,Dialogue,I'm not moving.,1,3,1
+4,Probst,ShiiAnn,,319,1,Dialogue,I don't think you've taken your hand off your hip.,1,10,99
+4,ShiiAnn,Probst,,320,1,Dialogue,Nope.,1,1,1
+4,ShiiAnn,Probst,,320,2,Dialogue,"It's numb, but I need this immunity, like I said, Jeff, desperately.",1,12,1
+4,Rupert,ShiiAnn,One Person,321,1,Dialogue,ShiiAnn you are tough.,1,4,99
+4,ShiiAnn,Rupert,One Person,322,1,Dialogue,"Dude, I'm going to win.",1,5,40.06
+5,Probst,Tribe,,323,1,Dialogue,Boston Rob's out of the competition.,1,6,40.06
+5,Probst,Tribe,,323,2,Dialogue,Next door neighbors Rupert and ShiiAnn still fighting for immunity.,1,10,89.5
+5,Probst,Tribe,,323,3,Dialogue,"Since it's just down to you two, a little reminder: Somebody's gonna leave here with this around their neck.",1,19,99
+5,Probst,Tribe,,323,4,Dialogue,That means they are safe tonight at the vote.,1,9,92.24
+5,Probst,Tribe,,323,5,Dialogue,The other person will not have that same security.,1,9,1
+5,Rob,Rupert,One Person,324,1,Dialogue,"Rupert, stay up there.",1,4,40.06
+5,Jenna,Rupert,One Person,325,1,Dialogue,"You got this, Rupert.",1,4,99
+5,Probst,Tribe,,326,1,Dialogue,You guys have lasted two hours.,1,6,99
+5,Probst,Tribe,,326,2,Dialogue,"Two long, painful hours.",1,4,40.06
+5,Probst,Rupert,,327,1,Dialogue,"How much more you got left in you, Rupert?",1,9,99
+5,Rupert,Probst,A Group,328,1,Dialogue,Two hours...,1,2,40.06
+5,Rupert,Probst,A Group,328,2,Dialogue,four hours...,1,2,40.06
+5,Rupert,Probst,A Group,328,3,Dialogue,I don't know.,1,3,1
+5,Rupert,Probst,A Group,328,4,Dialogue,Whatever it takes.,1,3,40.06
+5,Probst,ShiiAnn,,329,1,Dialogue,"ShiiAnn, any sign of quitting in you?",1,7,99
+5,ShiiAnn,Probst,A Group,330,1,Dialogue,Nope.,1,1,1
+5,Jenna,Rupert,One Person,331,1,Dialogue,"Careful, Rupert you're moving it a lot.",1,7,99
+5,Jenna,Rupert,One Person,331,2,Dialogue,You're moving the chain.,1,4,99
+5,ShiiAnn,Tribe,A Group,332,1,Dialogue,Yes!,1,1,40.06
+5,ShiiAnn,Tribe,A Group,332,2,Dialogue,Yes!,1,1,40.06
+5,ShiiAnn,Tribe,A Group,332,3,Dialogue,Yes!,1,1,40.06
+5,Probst,Tribe,,333,1,Dialogue,Rupert's out of the competition.,1,5,40.06
+5,Probst,Tribe,,333,2,Dialogue,ShiiAnn wins immunity.,1,3,40.06
+5,ShiiAnn,Tribe,A Group,334,1,Dialogue,Whoo!,1,1,40.06
+5,ShiiAnn,Tribe,A Group,334,2,Dialogue,Whoo!,1,1,40.06
+5,ShiiAnn,Tribe,A Group,334,3,Dialogue,Yeah!,1,1,40.06
+5,ShiiAnn,Tribe,A Group,334,4,Dialogue,Take that!,1,2,40.06
+5,Alicia,ShiiAnn,One Person,335,1,Dialogue,"Don't forget, you got to go home with us, ShiiAnn.",1,10,99
+5,Alicia,ShiiAnn,One Person,335,2,Dialogue,"Be very careful, sweetheart.",1,4,99
+5,ShiiAnn,Tribe,A Group,336,1,Dialogue,"Hey, you know what?",1,4,99
+5,ShiiAnn,Tribe,A Group,336,2,Dialogue,"I love you guys, but I need this more than all of you guys.",1,14,97.11
+5,Alicia,ShiiAnn,One Person,337,1,Dialogue,"Yeah, don't get too cocky though.",1,6,1
+5,Alicia,ShiiAnn,One Person,337,2,Dialogue,You got to live with us.,1,6,99
+5,ShiiAnn,Tribe,A Group,338,1,Dialogue,I needed it more than all of you guys.,1,9,92.24
+5,Probst,ShiiAnn,,339,1,Dialogue,"All right, ShiiAnn, turn around.",1,5,40.06
+5,Probst,ShiiAnn,,339,2,Dialogue,Looks like you're about ready to cry.,1,7,99
+5,Probst,ShiiAnn,,339,3,Dialogue,You doing all right?,1,4,99
+5,ShiiAnn,Tribe,A Group,340,1,Dialogue,I'm doing great they're tears of joy.,1,7,40.06
+5,ShiiAnn,Tribe,A Group,340,2,Dialogue,I knew I was going home tonight and now...,1,9,1
+5,Probst,ShiiAnn,,341,1,Dialogue,It most definitely will not be you.,1,7,40.06
+5,Probst,ShiiAnn,,341,2,Dialogue,Great effort.,1,2,40.06
+5,Probst,ShiiAnn,,341,3,Dialogue,You are safe tonight at Tribal Council.,1,7,99
+5,ShiiAnn,Probst,,342,1,Dialogue,Thank you.,1,2,99
+5,Probst,ShiiAnn,,343,1,Dialogue,Guaranteed a one-in-six shot of winning this thing and the million bucks.,1,12,40.06
+5,Probst,Tribe,,344,1,Dialogue,"For the rest of you, I can't say the same thing.",1,11,1
+5,Probst,Tribe,,344,2,Dialogue,Somebody is going home tonight.,1,5,99
+5,Probst,Tribe,,344,3,Dialogue,Tribal Council.,1,2,40.06
+5,Probst,Tribe,,344,4,Dialogue,I'll see you there.,1,4,99
+5,Probst,Tribe,,344,5,Dialogue,Go back to camp.,1,4,40.06
+5,ShiiAnn,Tribe,A Group,345,1,Dialogue,I didn't mean to get so excited I wasn't trying to gloat.,1,12,1
+5,ShiiAnn,Tribe,A Group,345,2,Dialogue,I was just...,1,3,1
+5,ShiiAnn,Tribe,A Group,345,3,Dialogue,Really wanted to win.,1,4,40.06
+5,Jenna,ShiiAnn,One Person,346,1,Dialogue,Everybody gets excited when they win immunity or reward.,1,9,92.24
+5,ShiiAnn,Tribe,A Group,347,1,Dialogue,"Just today, I really needed it, so I got a little excited.",1,12,1
+5,Jenna,ShiiAnn,One Person,348,1,Dialogue,That's all right,1,3,40.06
+5,Alicia,Camera,,349,1,Dialogue,The thing that bothered me about ShiiAnn's victory is that she tried to throw it in our face the moment she won.,1,22,96.39
+5,Alicia,Camera,,349,2,Dialogue,"And the first thing she does is let out this victory cry, and she's, like, ""Yeah!",1,16,94.84
+5,Alicia,Camera,,349,3,Dialogue,Ha!,1,1,40.06
+5,Alicia,Camera,,349,4,Dialogue,"I did it!""",1,3,1
+5,Alicia,Camera,,349,5,Dialogue,You know?,1,2,99
+5,Alicia,Camera,,349,6,Dialogue,"She's pointing at all of us, and I just looked at her and said, ""I wouldn't be that cocky - you still have to live with us.""",1,26,99
+5,Alicia,Tribe,A Group,350,1,Dialogue,Let her enjoy her moment.,1,5,99
+5,Rob,Tribe,A Group,351,1,Dialogue,"Yeah, it's not gonna last.",1,5,1
+5,Alicia,Tribe,A Group,352,1,Dialogue,It's her moment.,1,3,99
+5,ShiiAnn,Camera,,353,1,Dialogue,I'm feeling a whole lot better now that these proud little Chaboga Mogos are gonna have to eat one of their own.,1,22,40.06
+5,ShiiAnn,Camera,,353,2,Dialogue,"I love the fact that they're all sitting there squirming in their shorts, ignoring me yet again.",1,17,40.06
+5,ShiiAnn,Camera,,353,3,Dialogue,They should have been cutting deals with me before my immunity win.,1,12,6.61
+5,ShiiAnn,Camera,,353,4,Dialogue,"Now that I have an immunity win, I know that Alicia's head is on the chopping block, Rob Mariano's head's on the chopping block, and so is Rupert's.",1,28,9.23
+5,ShiiAnn,Camera,,353,5,Dialogue,Stupid people.,1,2,99
+5,ShiiAnn,Camera,,353,6,Dialogue,Stupid people.,1,2,99
+5,ShiiAnn,Camera,,353,7,Dialogue,Let me just say that again: stupid players.,1,8,1.71
+5,ShiiAnn,Rupert,One Person,354,1,Dialogue,You know you're head is big-time on the chopping block today.,1,11,99
+5,Rupert,ShiiAnn,One Person,355,1,Dialogue,Oh I know.,1,3,1
+5,Rupert,ShiiAnn,One Person,355,2,Dialogue,I'm taking all my stuff to Tribal Council with me.,1,10,1
+5,ShiiAnn,Rupert,One Person,356,1,Dialogue,I'm telling you.,1,3,99
+5,ShiiAnn,Rupert,One Person,356,2,Dialogue,Rob is the person to get rid of because he's the kingpin.,1,12,99
+5,ShiiAnn,Rupert,One Person,356,3,Dialogue,You got to work it or else you're going.,1,9,99
+5,Rupert,ShiiAnn,One Person,357,1,Dialogue,"Oh, I know.",1,3,1
+5,Rob,Tribe,A Group,358,1,Dialogue,ShiiAnn's a deal maker.,1,4,40.06
+5,Rob,Tribe,A Group,358,2,Dialogue,Such a strategist.,1,3,40.06
+5,Rob,Tribe,A Group,358,3,Dialogue,Look at her down there.,1,5,99
+5,Rob,Tribe,A Group,358,4,Dialogue,Look at the strategizing going on right now.,1,8,40.06
+5,Rob,Camera,,359,1,Dialogue,I have two options tonight.,1,5,1
+5,Rob,Camera,,359,2,Dialogue,"I can stick with Rupert and Jenna, myself and Amber to make that foursome, or I can go with Big Tom, Alicia, Amber and myself...",1,25,1
+5,Rob,Camera,,359,3,Dialogue,"and take out Rupert or Jenna, 'cause I don't know if Rupert and Jenna are like 100% with us.",1,19,3.34
+5,Rob,Camera,,359,4,Dialogue,I like to say Alicia is out of here.,1,9,2.75
+5,Rob,Camera,,359,5,Dialogue,She is.,1,2,99
+5,Rob,Camera,,359,6,Dialogue,She's out of here.,1,4,99
+5,Rob,Camera,,359,7,Dialogue,Maybe not.,1,2,1
+5,Rob,Camera,,359,8,Dialogue,Maybe me.,1,2,1
+5,Amber,ShiiAnn,One Person,360,1,Dialogue,"For me, it's between probably Rupert or Alicia.",1,8,1
+5,ShiiAnn,Amber,One Person,361,1,Dialogue,You prefer Alicia.,1,3,99
+5,Amber,ShiiAnn,One Person,362,1,Dialogue,I don't know.,1,3,1
+5,ShiiAnn,Amber,One Person,363,1,Dialogue,"For me it would be between Rupert and Rob, because I think one of them needs to go.",1,18,13.82
+5,ShiiAnn,Amber,One Person,363,2,Dialogue,They're too big and too powerful.,1,6,98.75
+5,ShiiAnn,Amber,One Person,363,3,Dialogue,"You feel more comfortable with Rob, you trust him more 'cause you're...",1,12,99
+5,Amber,ShiiAnn,One Person,364,1,Dialogue,"Well, I...",1,2,1
+5,Amber,ShiiAnn,One Person,364,2,Dialogue,"I trust him more and I think that even if I'm lying to him, he's gonna trust me.",1,18,2.75
+5,ShiiAnn,Camera,,365,1,Dialogue,She's so sweet.,1,3,99
+5,ShiiAnn,Camera,,365,2,Dialogue,"You hate to hate her because she's so lovely and she's got those beautiful green eyes, but you know what?",1,20,99
+5,ShiiAnn,Camera,,365,3,Dialogue,She is one of the shrewdest players out here.,1,9,92.24
+5,Rob,Amber,,366,1,Dialogue,"""We love you.",1,3,99
+5,Rob,Amber,,366,2,Dialogue,We can't wait for you to come home and be a family.,1,12,99
+5,Rob,Amber,,366,3,Dialogue,"Wherever you are, I know you're kicking some ass.",1,9,99
+5,Rob,Amber,,366,4,Dialogue,"Remember, the key to the game is loose lips sink ships.""",1,11,40.06
+5,Amber,Rob,One Person,367,1,Dialogue,What?,1,1,40.06
+5,Rob,Amber,One Person,368,1,Dialogue,"Honestly, like, if I didn't trust you 100%, I would never let you read this, but, you know...",1,18,13.82
+5,Amber,Rob,One Person,369,1,Dialogue,"""Remember, they key to the game is loose lips.""",1,9,92.24
+5,Rob,Camera,,370,1,Dialogue,My main alliance still is with Amber.,1,7,40.06
+5,Rob,Camera,,370,2,Dialogue,"It's because she trusts me completely; even though I may not trust her 100% completely, I know she does.",1,19,1
+5,Rob,Camera,,370,3,Dialogue,I think she does.,1,4,40.06
+5,Rob,Amber,One Person,371,1,Dialogue,We can do this.,1,4,99
+5,Rob,Amber,One Person,371,2,Dialogue,We're going to do this.,1,5,99
+5,Rob,Amber,One Person,371,3,Dialogue,You know that?,1,3,99
+5,Rob,Amber,One Person,371,4,Dialogue,We gotta just keep the paranoia to a minimum before Tribal Council.,1,12,98.75
+6,Rob,Amber,One Person,372,1,Dialogue,We gotta trust in a game like this.,1,8,99
+6,Rob,Amber,One Person,372,2,Dialogue,"It's like huge, you know?",1,5,99
+6,Rob,Amber,One Person,372,3,Dialogue,It makes all the difference in the world and I appreciate it.,1,12,1
+6,Rob,Camera,,373,1,Dialogue,Of course she's playing the game.,1,6,98.75
+6,Rob,Camera,,373,2,Dialogue,"She may be playing me, I don't know.",1,8,1
+6,Rob,Camera,,373,3,Dialogue,I don't think so.,1,4,1
+6,Rob,Camera,,373,4,Dialogue,I really don't.,1,3,1
+6,Rob,Camera,,373,5,Dialogue,I think it's genuine what's going on.,1,7,1
+6,Rob,Camera,,373,6,Dialogue,"I could be the biggest sucker in history, and if so, hey - she had me fooled.",1,16,1.71
+6,Probst,Tribe,,374,1,Dialogue,"Now bring in the members of our jury, Lex and Kathy, voted out in the last Tribal Council.",1,18,98.75
+6,Probst,Tribe,,374,2,Dialogue,I'll remind you guys that the jury's here merely to observe.,1,11,99
+6,Probst,Tribe,,374,3,Dialogue,They're not to talk to you.,1,6,98.75
+6,Probst,Tribe,,374,4,Dialogue,You're not to try and communicate with them.,1,8,94.84
+6,Probst,ShiiAnn,,375,1,Dialogue,"It's been a busy couple of days, culminating with a very big and, from what I gather today, important victory at today's immunity challenge for you, ShiiAnn.",1,27,62.05
+6,ShiiAnn,Probst,,376,1,Dialogue,"Yes, very, very important.",1,4,40.06
+6,Probst,ShiiAnn,,377,1,Dialogue,"You were very vocal today and, from where I sat, sort of created an island for yourself.",1,17,99
+6,ShiiAnn,Tribe,A Group,378,1,Dialogue,"This tribe is very unique in that they've been very, very open with me about the fact that they are a tight alliance and I'm going home next.",1,28,61.28
+6,ShiiAnn,Tribe,A Group,378,2,Dialogue,"So, you know, today at the challenge, I was very vocal, because I'm going to try my best to fight.",1,20,15.75
+6,Probst,Rupert,,379,1,Dialogue,"Rupert, what's your take on everything that went down today?",1,10,99
+6,Rupert,Tribe,A Group,380,1,Dialogue,That was one heck of a hard challenge.,1,8,40.06
+6,Rupert,Tribe,A Group,380,2,Dialogue,"After 20 minutes, I was dying.",1,6,1
+6,Rupert,Tribe,A Group,380,3,Dialogue,"ShiiAnn says she was the only one that needed it, but now somebody else needs it.",1,16,40.06
+6,Rupert,Tribe,A Group,380,4,Dialogue,There's been talk that I'm targeted.,1,6,1
+6,Rupert,Tribe,A Group,380,5,Dialogue,"I felt like, especially with that silly reward challenge that was the pecking order caca.",1,15,10.48
+6,Rupert,Tribe,A Group,380,6,Dialogue,I'm up.,1,2,1
+6,Rupert,Tribe,A Group,380,7,Dialogue,"I mean, my number could be up.",1,7,1
+6,Probst,Alicia,,381,1,Dialogue,"Alicia, we have four from the original Chapera.",1,8,99
+6,Probst,Alicia,,381,2,Dialogue,You guys have the numbers.,1,5,99
+6,Probst,Alicia,,381,3,Dialogue,How strong is that group still?,1,6,98.75
+6,Alicia,Tribe,A Group,382,1,Dialogue,"Well, the original Chapera is- is always going to be strong because we've been together from the day one, but we also could not have done it without Rupert and Jenna joining our tribe.",1,34,85.94
+6,Alicia,Tribe,A Group,382,2,Dialogue,"Honestly, we knew that once we got to six, game on.",1,11,99
+6,Alicia,Tribe,A Group,382,3,Dialogue,Anything can happen and any one of us is vulnerable at this point.,1,13,98.04
+6,Probst,ShiiAnn,,383,1,Dialogue,"ShiiAnn, did you notice a power shift today?",1,8,99
+6,Probst,ShiiAnn,,383,2,Dialogue,Were you the person in camp people wanted to come talk to and try and make a deal?,1,18,99
+6,ShiiAnn,Tribe,A Group,384,1,Dialogue,"No, I-I You know, it's so funny.",1,7,97.11
+6,ShiiAnn,Tribe,A Group,384,2,Dialogue,"What I notice about this group of six is that, as far as I can tell, no one wants to take a leadership position and say this person in particular is getting voted out tonight.",1,35,24.76
+6,Probst,Jenna,,385,1,Dialogue,"Jenna, you were rolling your head all over the place.",1,10,99
+6,Jenna,Tribe,A Group,386,1,Dialogue,Cause it makes us sound dumb.,1,6,99
+6,ShiiAnn,Jenna,One Person,387,1,Dialogue,"No, no, no, I don't think...",1,6,1
+6,Probst,ShiiAnn,,388,1,Dialogue,"Hold off, ShiiAnn.",1,3,40.06
+6,Jenna,Tribe,A Group,389,1,Dialogue,"I mean, maybe we're not telling ShiiAnn everything because we don't need her to know our strategies.",1,17,99
+6,Probst,Rob,,390,1,Dialogue,"Boston Rob, first time in a while, you haven't had that necklace around your neck.",1,15,96.04
+6,Probst,Rob,,390,2,Dialogue,"You're a provider, very strong, seem to be a likeable guy.",1,11,99
+6,Probst,Rob,,390,3,Dialogue,Why not get rid of you while we have the opportunity?,1,11,99
+6,Rob,Probst,,391,1,Dialogue,"What are you giving them ideas for, Jeff?",1,8,99
+6,Probst,Rob,,392,1,Dialogue,It had to have crossed your mind.,1,7,99
+6,Rob,Tribe,A Group,393,1,Dialogue,Of course.,1,2,40.06
+6,Rob,Tribe,A Group,393,2,Dialogue,Are you kidding me?,1,4,99
+6,Rob,Tribe,A Group,393,3,Dialogue,"I'm sitting here, I won the first two immunities, I've been strong pretty much, I think, the whole game.",1,19,1
+6,Rob,Tribe,A Group,393,4,Dialogue,I'm definitely nervous tonight and I wish I had that necklace on.,1,12,1
+6,Probst,Tribe,,394,1,Dialogue,"On that note, it's time to vote.",1,7,40.06
+6,Probst,ShiiAnn,,395,1,Dialogue,"ShiiAnn, you have immunity.",1,4,99
+6,Probst,ShiiAnn,,395,2,Dialogue,"I know you don't want to give it away, but I'll go ahead and ask.",1,15,1.24
+6,ShiiAnn,Probst,,396,1,Dialogue,"No, Jeff, I'm not going to give it away.",1,9,1
+6,Probst,Tribe,,397,1,Dialogue,You cannot vote for ShiiAnn.,1,5,40.06
+6,Probst,Tribe,,397,2,Dialogue,Everybody else is fair game.,1,5,40.06
+6,Probst,Tribe,,397,3,Dialogue,Let's vote.,1,2,99
+6,Probst,Amber,,398,1,Dialogue,"Amber, you're up.",1,3,99
+6,Rob,Camera,,399,1,Dialogue,"Remember the little fight we had on day three, where I zipped my lip?",1,14,40.06
+6,Rob,Camera,,399,2,Dialogue,"I've been waiting to do this for 27 days, so...",1,10,3.95
+6,Rob,Camera,,399,3,Dialogue,"au revoir, adios, arrivederci, sayonara, or as we say in Boston, see you later.",1,14,99
+6,Probst,Tribe,,400,1,Dialogue,I'll go tally the votes.,1,5,1
+6,Probst,Tribe,,400,2,Dialogue,"Once the votes are read, the decision is final.",1,9,40.06
+6,Probst,Tribe,,400,3,Dialogue,The person voted out will be asked to leave the Tribal Council area immediately.,1,14,79.51
+6,Probst,Tribe,,400,4,Dialogue,I'll read the votes.,1,4,1
+6,Probst,Tribe,,400,5,Dialogue,First vote...,1,2,40.06
+6,Probst,Tribe,,400,6,Dialogue,Alicia.,1,1,40.06
+6,Probst,Tribe,,400,7,Dialogue,Alicia.,1,1,40.06
+6,Probst,Tribe,,400,8,Dialogue,Two votes Alicia.,1,3,40.06
+6,Probst,Tribe,,400,9,Dialogue,Rupert.,1,1,40.06
+6,Probst,Tribe,,400,10,Dialogue,"Two votes Alicia, one vote Rupert.",1,6,40.06
+6,Probst,Tribe,,400,11,Dialogue,Alicia.,1,1,40.06
+6,Probst,Tribe,,400,12,Dialogue,"Twelfth person voted out of Survivor: All-Stars, and the third member of our jury, Alicia.",1,15,99
+6,Probst,Alicia,,401,1,Dialogue,You need to bring me your torch.,1,7,99
+6,Alicia,Tribe,A Group,402,1,Dialogue,"Well, somebody turned.",1,3,99
+6,Alicia,Tribe,A Group,402,2,Dialogue,I'd better not find out who it is.,1,8,1
+6,Probst,Alicia,,403,1,Dialogue,"Alicia, the tribe has spoken.",1,5,99
+6,Probst,Tribe,,404,1,Dialogue,"Well, ShiiAnn was very open tonight in sharing that she was treated with respect and honesty regarding her status in the tribe.",1,22,96.39
+6,Probst,Tribe,,404,2,Dialogue,"Clearly, that doesn't apply to members of your own family of six, as Alicia never saw it coming.",1,18,92.24
+6,Probst,Tribe,,404,3,Dialogue,"Nine days left, guys.",1,4,99
+6,Probst,Tribe,,404,4,Dialogue,Grab your torches.,1,3,99
+6,Probst,Tribe,,404,5,Dialogue,Go back to camp.,1,4,40.06
+6,Probst,Tribe,,404,6,Dialogue,Good night.,1,2,40.06

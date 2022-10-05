@@ -1,0 +1,786 @@
+---
+title: "Study 1 -- Network Discernment"
+subtitle: "Conversational Linguistic Features Predict Social Network Learning"
+author: "Helen Schmidt"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    df_print: paged
+    theme: cerulean
+    toc: yes
+    toc_float: yes
+    code_folding: hide
+---
+<style>
+h1, h2, h3, h4, h5, h6, legend {
+    color: #1c3aa9;
+}
+</style>
+
+```{r warning = FALSE, message = FALSE, echo = FALSE, include = FALSE}
+knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
+library(ggplot2)
+library(tidytext)
+library(readr)
+library(knitr)
+library(wordcloud)
+library(wordcloud2)
+library(RColorBrewer)
+library(tm)
+library(SnowballC)
+library(XML)
+library(RCurl)
+library(ggpubr)
+library(wesanderson)
+library(reshape2)
+library(MetBrewer)
+library(sentimentr)
+library(sna)
+library(splitstackshape)
+library(GGally)
+library(ggraph)
+library(gutenbergr)
+library(igraph)
+library(Matrix)
+library(network)
+library(tidygraph)
+library(tibble)
+library(formattable)
+library(forcats)
+library(lme4)
+library(ggthemes)
+library(lmerTest)
+library(misty)
+library(Rmisc)
+library(effects)
+library(arm)
+library(stringr)
+library(sjPlot)
+library(lattice)
+library(devtools)
+library(sjmisc)
+library(ggeffects)
+library(reghelper)
+library(glmmTMB)
+library(reactable)
+library(reactablefmtr)
+library(tidyr)
+library(dplyr)
+library(janitor)
+library(skimr)
+library(corrplot)
+library(bmlm)
+library(stargazer)
+library(ggdist)
+library(gghalves)
+library(patchwork)
+```
+
+Set up themes and notebook-wide settings. 
+
+```{r}
+# set up themes and notebook-wide settings
+my.alpha = .2
+colors <- c("#2185c5ff","#ff9715ff","#f20253ff","#7ecefdff","#1c3aa9ff")
+se <- function(x) sqrt(var(x)/length(x))  #function to calculate SE
+```
+
+Set global working directory.
+
+```{r, setup, include = FALSE}
+# set global wd 
+knitr::opts_knit$set(root.dir = "/Volumes/GoogleDrive/My Drive/SANLab/Experiments/Survivor-Language/Analysis/") 
+# set to 3 decimal places for entire markdown
+options(digits = 10)
+```
+
+Read in data. 
+
+```{r}
+data <- read.csv("./Paper-Analysis/data/dat_survivor.csv")
+# name first column relative trial order
+names(data)[1] <- "RelativeTrialOrder"
+# name second column raw trial order
+names(data)[2] <- "RawTrialOrder"
+
+capFirst <- function(s) {paste(toupper(substring(s, 1, 1)), substring(s, 2), sep = "")}
+data$Target <- capFirst(data$Target)
+data$LeftPersonImg <- capFirst(data$LeftPersonImg)
+data$RightPersonImg <- capFirst(data$RightPersonImg)
+data$choice <- capFirst(data$choice)
+data[data == "Shiiann"] = "ShiiAnn"
+# name rename clips
+names(data)[8] <- "ClipNumber"
+
+# print number of observations
+numObs <- nrow(data)
+print(paste0("Number of observations = ", numObs, sep = ""))
+```
+
+# 1. Reaction times across conditions
+
+Analyze reaction time across the three conditions (rt ~ block type + (1|PID)) to see if the relational judgments are made slower than the win judgments.
+
+```{r}
+# rename RT column
+names(data)[9] <- "RT"
+# summarize mean RTs for each participant in each block type
+reactions <- data %>%
+  group_by(condType, PID) %>%
+  summarize(meanRT = mean(RT))
+
+# print mean RTs for each condition
+average.RTs <- reactions %>% 
+  group_by(condType) %>% 
+  summarize(meanRTs = mean(meanRT))
+
+print(average.RTs)
+
+# whole data
+data$condType <- as.factor(data$condType)
+data <- within(data, condType <- relevel(condType, ref = "Win"))
+
+# run multilevel model
+modelDW <- lmer(RT ~ condType + (1|PID), data = data)
+summary(modelDW)
+confint(modelDW)
+
+# also run null comparing random effects to RTs
+modelRand <- lmer(RT ~ (1|PID), data = data)
+anova(modelDW, modelRand)
+```
+
+## Plot
+
+```{r}
+RTs <- summarySE(data, measurevar = "RT", groupvars = "condType")
+
+plot.colors <- c(colors[2], colors[3], colors[1])
+
+# make condType a character for plotting
+data$condType <- as.character(data$condType)
+
+# violin plot
+ggplot(data, aes(x = condType, y = RT, color = condType, fill = condType)) +
+  stat_halfeye(adjust = 0.5, width = 0.6, .width = 0,
+               justification = -0.2) +
+  geom_boxplot(width = 0.15, outlier.shape = NA, color = "black") +
+  # fill with my selected colors
+  scale_fill_manual(values = plot.colors) +
+  scale_color_manual(values = plot.colors) +
+  # add point for mean of each valence category
+  geom_point(data = average.RTs,
+             aes(x = condType, y = meanRTs), color = "black", shape = 16,
+             size = 2) +
+  # add significance stars
+  ggplot2::annotate("text", x = 1.1, y = 5, label = "***", size = 5) +
+  ggplot2::annotate("text", x = 2.1, y = 5, label = "***", size = 5) +
+  xlab(NULL) +
+  ylab("Response\nTime (s)") +
+  theme_classic() + 
+  theme(legend.position = "none",
+        panel.background = element_blank(),
+        axis.title.x = element_text(vjust = -0.4, size = 16),
+        axis.title.y = element_text(vjust = 1.5, size = 16), 
+        axis.text = element_text(size = 12),
+        legend.text = element_text(size = 10),
+        legend.title = element_text(size = 12))
+
+RT.condition <- last_plot()
+```
+
+## Re-reference model
+
+```{r}
+# whole data
+data$condType <- as.factor(data$condType)
+data <- within(data, condType <- relevel(condType, ref = "Friend"))
+
+# run multilevel model
+model <- lmer(RT ~ condType + (1|PID), data = data)
+summary(model)
+confint(model)
+```
+
+## Standardized Betas
+
+```{r}
+# z-score RTs
+data$RT.z <- as.numeric(scale(data$RT))
+# summarize mean RTs for each participant in each block type
+reactions <- data %>%
+  group_by(condType, PID) %>%
+  summarize(meanRT.z = mean(RT.z))
+
+# print mean RTs for each condition
+average.RTs <- reactions %>% 
+  group_by(condType) %>% 
+  summarize(meanRTs.z = mean(meanRT.z))
+
+print(average.RTs)
+
+# whole data
+data$condType <- as.factor(data$condType)
+data <- within(data, condType <- relevel(condType, ref = "Win"))
+
+# run multilevel model
+modelDW <- lmer(RT.z ~ condType + (1|PID), data = data)
+summary(modelDW)
+confint(modelDW)
+
+# also run null comparing random effects to RTs
+modelRand <- lmer(RT.z ~ (1|PID), data = data)
+anova(modelDW, modelRand)
+
+# whole data
+data$condType <- as.factor(data$condType)
+data <- within(data, condType <- relevel(condType, ref = "Friend"))
+
+# re-reference
+model <- lmer(RT.z ~ condType + (1|PID), data = data)
+summary(model)
+confint(model)
+```
+
+
+
+***
+
+# 2. Reaction time as function of condition and time
+See if individuals are learning over time, shown as all judgments should becoming easier and therefore faster. 
+
+Note: Trial numbers are not mean-centered because it's impossible to have negative trial numbers and mean-centering would result in negative trial numbers. 
+
+See reaction time findings from: https://www.sciencedirect.com/science/article/pii/S1053811919310894?ref=pdf_download&fr=RR-2&rr=7349bd8cbc0e8c36
+
+```{r}
+# set win as the reference
+data$condType <- as.factor(data$condType)
+data <- within(data, condType <- relevel(condType, ref = "Win"))
+
+# run multilevel model
+modelW <- lmer(RT ~ condType * RawTrialOrder + (1|PID), data = data)
+# summarize model
+summary(modelW)
+# get confidence intervals
+confint(modelW)
+# get simple slopes
+simple_slopes(modelW)
+```
+
+## Plot!
+
+```{r}
+# average RT across each condition per participant
+RTs.overTime <- data %>%
+  group_by(PID, condType, RawTrialOrder) %>%
+  summarize(clipRT = mean(RT))
+
+# average RTs per condition across participants
+RTs.participant <- RTs.overTime %>%
+  group_by(condType, RawTrialOrder) %>%
+  summarize(participantMeanRT = mean(clipRT))
+
+# Note: Summarize gives a friendly warning for the above code notifying me that I am grouping by PID, condType, and RawTrialOrder in the first pipe and by condType and RawTrialOrder in the second pipe. This is merely a warning and does not affect the summarized data.
+  
+ggplot(RTs.overTime, 
+       aes(x = RawTrialOrder, y = clipRT, fill = condType, 
+           color = condType, group = condType)) +
+  # geom_point(alpha = 0.05, shape = 20, size = 2, stroke = 0) +
+  # plot average RTs across participants per trial
+  geom_point(data = RTs.participant, aes(x = RawTrialOrder, y = participantMeanRT,
+                                         fill = condType, color = condType, group = condType),
+             alpha = 0.2, shape = 20, size = 2, stroke = 0) +
+  geom_smooth(method = "lm", alpha = 0.5, size = 1) +
+  scale_x_continuous(breaks = scales::pretty_breaks(n = 6)) +
+  scale_color_manual(values = colors, name = "Group") +
+  scale_fill_manual(values = colors, name = "Group") +
+  xlab("Trial Number") +
+  ylab("Mean\nResponse Time (s)") +
+  theme_classic() +
+  theme(legend.position = "none",
+        panel.background = element_blank(),
+        axis.title.x = element_text(vjust = -0.4, size = 16),
+        axis.title.y = element_text(vjust = 1.5, size = 16), 
+        axis.text = element_text(size = 12),
+        legend.text = element_text(size = 10),
+        legend.title = element_text(size = 12))
+
+RT.conditionTime <- last_plot()
+```
+
+## Compare interaction model
+
+```{r}
+# run multilevel model
+modelW <- lmer(RT ~ condType * RawTrialOrder + (1|PID), data = data)
+
+# run main effect model (null)
+null.modelW <- lmer(RT ~ condType + RawTrialOrder + (1|PID), data = data)
+
+anova(modelW, null.modelW)
+
+```
+
+## Standardized Betas
+
+```{r}
+# standardize trial number
+data$RawTrialOrder.z <- as.numeric(scale(data$RawTrialOrder))
+
+# set win as the reference
+data$condType <- as.factor(data$condType)
+data <- within(data, condType <- relevel(condType, ref = "Win"))
+
+# run multilevel model
+modelW <- lmer(RT.z ~ condType * RawTrialOrder.z + (1|PID), data = data)
+# summarize model
+summary(modelW)
+# get confidence intervals
+confint(modelW)
+# get simple slopes
+simple_slopes(modelW)
+
+# run main effect model (null)
+null.modelW <- lmer(RT.z ~ condType + RawTrialOrder.z + (1|PID), data = data)
+anova(modelW, null.modelW)
+```
+
+
+***
+
+# 3. Identify 'average' friendship and rivalry networks
+
+Identify the "average" network for friendship and rivalry and assume that it is the "correct" network. 
+
+To calculate network accuracy, we first calculate the mean % time chosen that each contestant pair (dyad) is chosen as friends or rivals (averaged across all participants). We then calculate the mean % time chosen at the participant level (averaged across each participant's responses). Next, we see which dyads the group chose as friends or rivals >50% of the time and <50% of the time. We also see which dyads each participant chosen as friends or rivals >50% of the time and <50% of the time. Then, we see how often each participant agrees with the group. 
+
+Group >50%, Participant >50% = agreement
+Group >50%, Participant <50% = disagreement
+Group <50%, Participant <50% = agreement
+Group <50%, Participant >50% = disagreement
+
+Finally, we calculate accuracy (measured as the % time each participant agreed with the group).
+
+For stats, we run a one-tailed t-test to see if participant-level accuracy is significantly greater than chance (50%). If it is, we can infer that participants are learning the network!
+
+```{r warning=F, message=F}
+# reformat choice data
+unique.targets <- unique(data$Target)
+unique.choices <- unique(data$choice)
+formatted.choices <- data.frame()
+
+# calculate % time chosen
+for (x in 1:length(unique(data$Target))) {
+  all.choices <- data.frame()
+  # subset to one target only
+  test <- subset(data, data$Target == unique.targets[x])
+  # loop through possible choices
+  for (y in 1:length(unique(data$choice))) {
+    # how many times was each person an option?
+    choices <- subset(test, c(test$LeftPersonImg == unique.choices[y] | test$RightPersonImg == unique.choices[y]))
+    # group by sub ID & clip #, count the number of times someone appears as a choice vs % time chosen
+    choices <- choices %>%
+      group_by(PID,Target,condType,ClipNumber) %>%
+        mutate(n = str_count(choice, unique.choices[y])) %>%
+          summarize(option = length(Target),
+                    selected = sum(n))
+    # add in choice name
+    choices$ChoiceOption <- unique.choices[y]
+    # calculate percent of time chosen
+    choices <- choices %>%
+      group_by(PID,ClipNumber,condType,Target,ChoiceOption) %>%
+        summarize(percent.chosen = selected/option)
+    # save choices into new data frame
+    all.choices <- rbind(all.choices, choices)
+  }
+  # save all targets into new data frame
+  formatted.choices <- rbind(formatted.choices, all.choices)
+}
+
+# This loop gives the friendly warning:
+# `summarise()` has grouped output by 'PID', 'Target', 'condType', 'ClipNumber', 'ChoiceOption'. You can override using the `.groups` argument. 
+# This is not an issue, it is just telling me which columns I've grouped by before summarizing.
+
+# remove data frames that are no longer needed
+rm(all.choices)
+rm(choices)
+rm(test)
+```
+
+```{r}
+# add dyad info
+formatted.choices <- data.frame(formatted.choices, stringsAsFactors = F) %>%
+  mutate(dyad = paste0(pmin(Target,ChoiceOption), pmax(Target,ChoiceOption), sep=""))
+
+# calculate average percent chosen across participants across clips
+# group.chosen shows the average % time chosen each dyad is chosen as friends or rivals or winners by the group
+group.chosen <- formatted.choices %>%
+  group_by(dyad, condType) %>%
+  summarize(groupTimeChosen = mean(percent.chosen))
+
+# calculate participant averages (collapse across 2x repeated block types)
+# participant.chosen shows the average % time each dyad is chosen as friends, rivals, or winners by each PID
+participant.chosen <- formatted.choices %>%
+  group_by(PID, dyad, condType) %>%
+  summarize(participantTimeChosen = mean(percent.chosen))
+
+# join group.chosen and participant.chosen
+chosen <- merge(group.chosen, participant.chosen, by = c("dyad","condType"))
+
+# only include friend and rival
+chosen <- subset(chosen, condType != "Win")
+
+# add column to mark where the group chose a dyad greater than 50% of the time
+chosen$groupChosen <- ifelse(chosen$groupTimeChosen >= .5, 1, 0)
+
+# add column to mark where each participant chose a dyad greater than 50% of the time
+chosen$participantChosen <- ifelse(chosen$participantTimeChosen >= .5, 1, 0)
+
+# add column to mark where group and participant agree
+chosen$agreement <- ifelse(chosen$groupChosen == chosen$participantChosen, 1, 0)
+
+# get overall accuracy measure per participant
+chosen <- chosen %>%
+  group_by(PID, condType) %>%
+  mutate(PID.OverallAccuracy = mean(agreement))
+
+accuracy <- chosen %>%
+  group_by(PID, condType) %>%
+  summarize(PID.OverallAccuracy = mean(agreement))
+
+friend.accuracy <- subset(accuracy, condType == "Friend")
+rival.accuracy <- subset(accuracy, condType == "Rival")
+
+# t test to see if PID accuracy is significantly greater than chance (50%)
+t.test(friend.accuracy$PID.OverallAccuracy, alternative = "greater", mu = 0.5)
+t.test(rival.accuracy$PID.OverallAccuracy, alternative = "greater", mu = 0.5)
+
+# Using summarize in this chunk gives the following messages:
+# `summarise()` has grouped output by 'dyad'. You can override using the `.groups` argument.
+# `summarise()` has grouped output by 'PID', 'dyad'. You can override using the `.groups` argument.
+# `summarise()` has grouped output by 'PID'. You can override using the `.groups` argument.
+# This is not an issue, it is just telling me which columns I've grouped by before summarizing.
+
+```
+
+## Plot!
+```{r}
+# get summary measures
+PIDaccuracy <- summarySE(accuracy, measurevar = "PID.OverallAccuracy", groupvars = "condType")
+
+# use accuracy data frame to plot
+ggplot(accuracy, aes(x = condType, y = PID.OverallAccuracy, color = condType, fill = condType)) +
+  geom_dotplot(binaxis = "y", stackdir = "center", dotsize = 2, binwidth = 0.01, alpha = 0.9) +
+  geom_violin(alpha = 0.4) +
+  scale_fill_manual(values = plot.colors) +
+  scale_color_manual(values = plot.colors) +
+  # add 95% confidence intervals
+  geom_errorbar(data = PIDaccuracy, aes(ymin = PID.OverallAccuracy-ci, ymax = PID.OverallAccuracy+ci),
+                width = 0.25, position = "dodge", color = "black") +
+  # add point for mean of each valence category
+  geom_point(data = PIDaccuracy,
+             aes(x = condType, y = PID.OverallAccuracy), color = "black", shape = 16,
+             size = 4) +
+  geom_hline(yintercept = 0.5) +
+  # add significance stars
+  ggplot2::annotate("text", x = 1, y = 1, label = "***", size = 5) +
+  ggplot2::annotate("text", x = 2, y = 1, label = "***", size = 5) +
+  ylim(0,1) +
+  xlab(NULL) +
+  ylab("Accuracy") +
+  theme_classic() + 
+  theme(legend.position = "none",
+        panel.background = element_blank(),
+        axis.title.x = element_text(vjust = -0.4, size = 16),
+        axis.title.y = element_text(vjust = 1.5, size = 16), 
+        axis.text = element_text(size = 12),
+        legend.text = element_text(size = 10),
+        legend.title = element_text(size = 12))
+
+accuracy.plot <- last_plot()
+```
+
+# Plot all three!
+
+```{r}
+# patchwork plot and save
+patchwork <- (RT.condition / RT.conditionTime) | accuracy.plot
+patchwork + plot_annotation(tag_levels = "A") & theme(plot.tag = element_text(size = 14, face = "bold"))
+
+ggsave(filename = "Study1-multiplot.pdf",
+       path = "/Volumes/GoogleDrive/My Drive/SANLab/Manuscripts/Survivor+Language/MarkdownFigures",
+       width = 10, height = 5,
+       units = c("in"))
+
+ggsave(filename = "Study1-multiplot.jpeg",
+       path = "/Volumes/GoogleDrive/My Drive/SANLab/Manuscripts/Survivor+Language/MarkdownFigures",
+       width = 10, height = 5,
+       units = c("in"))
+```
+
+***
+
+# 4. Network Graph
+
+```{r}
+# load preferred color palette from met brewer
+pp <- met.brewer(name = "Hiroshige")
+colors <- c("#2185c5ff","#ff9715ff","#f20253ff","#7ecefdff","#1c3aa9ff")
+
+# load data
+dat_csv <- read.csv("./Paper-Analysis/data/dat_survivor.csv")
+
+capFirst <- function(s) {paste(toupper(substring(s, 1, 1)), substring(s, 2), sep = "")}
+dat_csv$Target <- capFirst(dat_csv$Target)
+dat_csv$choice <- capFirst(dat_csv$choice)
+dat_csv$Target[dat_csv$Target == "Shiiann"] <- "Shii Ann"
+dat_csv$choice[dat_csv$choice == "Shiiann"] <- "Shii Ann"
+```
+
+## Friend Network
+
+```{r}
+set.seed(1)
+# select friend condition rows
+friend <- dat_csv %>% 
+  filter(condType == "Friend")
+
+# rename to reflect target (whom they were making the decision about)... 
+targets <- friend %>%
+  distinct(Target) %>%
+  dplyr::rename(label = Target)
+# and choice (whom they chose as that person's friend)
+choices <- friend %>%
+  distinct(choice) %>%
+  dplyr::rename(label = choice)
+
+# create nodes and edges of network
+nodes <- full_join(targets, choices) %>% rowid_to_column("id")
+# create choices
+per_choice <- friend %>%
+  group_by(Target, choice) %>%
+  dplyr::summarise(weight = n()) %>%
+  ungroup()
+# create edges of network
+edges <- per_choice %>%
+  left_join(nodes, by = c("Target" = "label")) %>%
+  dplyr::rename(from = id) %>%
+  left_join(nodes, by = c("choice" = "label")) %>%
+  dplyr::rename(to = id)
+edges <- dplyr::select(edges, from, to, weight)
+
+# label nodes
+nodes$label <- as.character(nodes$label)
+
+# create network figure!
+friend_igraph <-
+  graph_from_data_frame(d = edges,
+                        vertices = nodes,
+                        directed = TRUE)
+Eig <- eigen_centrality(friend_igraph)$vector
+page_rank <- page_rank(friend_igraph)$vector
+
+nodes_PR <- cbind(nodes, data.frame(page_rank))
+coords <- layout_nicely(friend_igraph)
+
+# save
+jpeg(file="/Volumes/GoogleDrive/My Drive/SANLab/Manuscripts/Survivor+Language/MarkdownFigures/Study1_friend_network.jpeg",
+     width = 2100, height = 1500, units = "px")
+pdf(file="/Volumes/GoogleDrive/My Drive/SANLab/Manuscripts/Survivor+Language/MarkdownFigures/Study1_friend_network.pdf",
+     width = 10, height = 8 )
+
+# save page ranks for later table
+friend.pagerank <- page_rank
+friend.nodes <- nodes$label
+friend.pagerank <- data.frame(friend.nodes,friend.pagerank)
+names(friend.pagerank)[1] <- "Names"
+
+## update denominator under edge.width to reflect # of participants
+plot(
+  friend_igraph,
+  edge.arrow.size = 1,
+  edge.curved = 0.3,
+  edge.width = ((E(friend_igraph)$weight/25))/3,
+  vertex.color = colors[2],
+  vertex.size = page_rank*450,
+  vertex.frame.color = colors[2],
+  vertex.label.color = "black",
+  vertex.label.cex = 1,
+  vertex.label.family = "sans",
+  vertex.label.font = 2,
+  layout = coords)
+
+```
+
+## Rival Network
+
+```{r}
+set.seed(1)
+# select friend condition rows
+rival <- dat_csv %>% 
+  filter(condType == "Rival")
+
+# rename to reflect target (whom they were making the decision about)... 
+targets <- rival %>%
+  distinct(Target) %>%
+  dplyr::rename(label = Target)
+# and choice (whom they chose as that person's rival)
+choices <- rival %>%
+  distinct(choice) %>%
+  dplyr::rename(label = choice)
+
+# create nodes and edges of network
+nodes <- full_join(targets, choices) %>% rowid_to_column("id")
+# create choices
+per_choice <- rival %>%
+  group_by(Target, choice) %>%
+  dplyr::summarise(weight = n()) %>%
+  ungroup()
+# create edges of network
+edges <- per_choice %>%
+  left_join(nodes, by = c("Target" = "label")) %>%
+  dplyr::rename(from = id) %>%
+  left_join(nodes, by = c("choice" = "label")) %>%
+  dplyr::rename(to = id)
+edges <- dplyr::select(edges, from, to, weight)
+
+# label nodes
+nodes$label <- as.character(nodes$label)
+
+# create network figure!
+friend_igraph <-
+  graph_from_data_frame(d = edges,
+                        vertices = nodes,
+                        directed = TRUE)
+Eig <- eigen_centrality(friend_igraph)$vector
+page_rank <- page_rank(friend_igraph)$vector
+
+nodes_PR <- cbind(nodes, data.frame(page_rank))
+coords <- layout_nicely(friend_igraph)
+
+# save
+jpeg(file="/Volumes/GoogleDrive/My Drive/SANLab/Manuscripts/Survivor+Language/MarkdownFigures/Study1_rival_network.jpeg",
+     width = 2100, height = 1500, units = "px")
+pdf(file="/Volumes/GoogleDrive/My Drive/SANLab/Manuscripts/Survivor+Language/MarkdownFigures/Study1_rival_network.pdf",
+     width = 10, height = 8 )
+
+# save page ranks for later table
+rival.pagerank <- page_rank
+rival.nodes <- nodes$label
+rival.pagerank <- data.frame(rival.nodes, rival.pagerank)
+names(rival.pagerank)[1] <- "Names"
+
+## update denominator under edge.width to reflect # of participants
+plot(
+  friend_igraph,
+  edge.arrow.size = 1,
+  edge.curved = 0.3,
+  edge.width = ((E(friend_igraph)$weight/25))/3,
+  vertex.color = colors[3],
+  vertex.size = page_rank*450,
+  vertex.frame.color = colors[3],
+  vertex.label.color = "black",
+  vertex.label.cex = 1,
+  vertex.label.family = "sans",
+  vertex.label.font = 2,
+  layout = coords)
+
+```
+
+***
+
+# 5. Avg % time chosen friends/rivals
+
+```{r}
+# set up data frame with names and order voted off
+Names <- c("Amber", "Rob", "Jenna", "Rupert", "Tom", "Shii Ann", "Alicia")
+order <- c("Winner", "6th", "5th", "4th", "3rd", "2nd", "1st")
+avg.time <- data.frame(Names, order)
+# merge with pageranks
+avg.time <- merge(avg.time, friend.pagerank, by = "Names")
+avg.time <- merge(avg.time, rival.pagerank, by = "Names")
+
+# read in all formatted choice data
+df.clean <- read.csv("./Paper-Analysis/data/df-clean.csv")
+# calculate avg time each choice is chosen as friends or rivals
+test <- df.clean %>%
+  group_by(ChoiceOption, condType) %>%
+  summarize(avg.PercentChosen = mean(percent.chosen))
+
+# friends
+friend <- subset(test, condType == "Friend")
+names(friend)[3] <- "Average % Time Chosen as Friends"
+names(friend)[1] <- "Names"
+friend <- friend[,-2]
+friend$Names[friend$Names == "ShiiAnn"] <- "Shii Ann"
+# rivals
+rival <- subset(test, condType == "Rival")
+names(rival)[3] <- "Average % Time Chosen as Rivals"
+names(rival)[1] <- "Names"
+rival <- rival[,-2]
+rival$Names[rival$Names == "ShiiAnn"] <- "Shii Ann"
+# win
+win <- subset(test, condType == "Win")
+names(win)[3] <- "Average % Time Chosen as Winner"
+names(win)[1] <- "Names"
+win$Names[win$Names == "ShiiAnn"] <- "Shii Ann"
+win <- win[,-2]
+
+# merge!
+avg.time <- merge(avg.time, friend, by = "Names")
+avg.time <- merge(avg.time, rival, by = "Names")
+avg.time <- merge(avg.time, win, by = "Names")
+
+avg.time$order <- factor(avg.time$order, levels = c('Winner', '6th', '5th', '4th', '3rd', '2nd', '1st'))
+
+summary <- avg.time[order(avg.time$order),]
+
+names(summary)[2] <- "Order Voted Off"
+
+# multiply % columns by 100
+summary$`Average % Time Chosen as Friends` <- summary$`Average % Time Chosen as Friends`*100
+summary$`Average % Time Chosen as Rivals` <- summary$`Average % Time Chosen as Rivals`*100
+summary$`Average % Time Chosen as Winner` <- summary$`Average % Time Chosen as Winner`*100
+
+summary.table <- reactable(summary,
+            outlined = T, striped = T,
+            style = list(fontFamily = "Arial", fontSize = "12px"),
+            compact = T,
+            resizable = T,
+            wrap = T,
+            fullWidth = F,
+            columns = list(
+              `Average % Time Chosen as Rivals` = colDef(name = "Average Time Chosen as Rivals (%)", 
+                                                         align = "center",
+                                                         format = colFormat(digits = 1)),
+              `Average % Time Chosen as Friends` = colDef(name = "Average Time Chosen as Friends (%)", 
+                                                          align = "center",
+                                                          format = colFormat(digits = 1)),
+              `Average % Time Chosen as Winner` = colDef(name = "Average Time Chosen as Winner (%)",
+                                                         align = "center",
+                                                         format = colFormat(digits = 1)),
+              `Order Voted Off` = colDef(name = "Order Voted Off", 
+                                         align = "center"),
+              Names = colDef(name = "Names",
+                             align = "center"),
+              friend.pagerank = colDef(name = "Friend PageRank",
+                                        align = "center",
+                                        format = colFormat(digits = 3)),
+              rival.pagerank = colDef(name = "Rival PageRank",
+                                      align = "center",
+                                      format = colFormat(digits = 3))))
+summary.table
+save_reactable(summary.table, "/Volumes/GoogleDrive/My Drive/SANLab/Manuscripts/Survivor+Language/MarkdownFigures/Study1_summary_table.png")
+
+library(webshot2)
+library(htmlwidgets)
+
+html_file <- "/Volumes/GoogleDrive/My Drive/SANLab/Manuscripts/Survivor+Language/MarkdownFigures/summary_table.html"
+img_file <- "/Volumes/GoogleDrive/My Drive/SANLab/Manuscripts/Survivor+Language/MarkdownFigures/Study1_summary_table.pdf"
+
+saveWidget(widget = summary.table, file = html_file, selfcontained = TRUE)
+webshot(url = html_file, file = img_file, delay = 0.1, vwidth = 1245)
+```
+
+

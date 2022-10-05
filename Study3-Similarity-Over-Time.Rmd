@@ -1,0 +1,479 @@
+---
+title: "Study 3 -- Similarity Over Time"
+subtitle: "Conversational Linguistic Features Predict Social Network Learning"
+author: "Helen Schmidt"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    df_print: paged
+    theme: cerulean
+    toc: yes
+    toc_float: yes
+    code_folding: hide
+---
+<style>
+h1, h2, h3, h4, h5, h6, legend {
+    color: #1c3aa9;
+}
+</style>
+
+```{r warning = FALSE, message = FALSE, echo = FALSE, include = FALSE}
+knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
+library(ggplot2)
+library(tidytext)
+library(readr)
+library(knitr)
+library(wordcloud)
+library(wordcloud2)
+library(RColorBrewer)
+library(tm)
+library(SnowballC)
+library(XML)
+library(RCurl)
+library(ggpubr)
+library(wesanderson)
+library(reshape2)
+library(MetBrewer)
+library(sentimentr)
+library(sna)
+library(splitstackshape)
+library(GGally)
+library(ggraph)
+library(gutenbergr)
+library(igraph)
+library(Matrix)
+library(network)
+library(tidygraph)
+library(tibble)
+library(formattable)
+library(forcats)
+library(lme4)
+library(ggthemes)
+library(lmerTest)
+library(misty)
+library(Rmisc)
+library(effects)
+library(arm)
+library(stringr)
+library(sjPlot)
+library(lattice)
+library(devtools)
+library(sjmisc)
+library(ggeffects)
+library(reghelper)
+library(glmmTMB)
+library(reactable)
+library(reactablefmtr)
+library(tidyr)
+library(dplyr)
+library(janitor)
+library(skimr)
+library(corrplot)
+library(bmlm)
+library(stargazer)
+library(patchwork)
+```
+
+Set up themes and notebook-wide settings. 
+
+```{r}
+# set up themes and notebook-wide settings
+my.alpha = .2
+colors <- c("#2185c5ff","#ff9715ff","#f20253ff","#7ecefdff","#1c3aa9ff")
+fr.colors <- c(colors[2], colors[3])
+se <- function(x) sqrt(var(x)/length(x))  #function to calculate SE
+```
+
+Set global working directory.
+
+```{r, setup, include = FALSE}
+# set global wd 
+knitr::opts_knit$set(root.dir = "/Volumes/GoogleDrive/My Drive/SANLab/Experiments/Survivor-Language/Analysis/") 
+# set to 3 decimal places for entire markdown
+options(digits = 10)
+```
+
+# Similarity over whole season
+
+% time chosen values are mean-centered at the dyad level.
+
+## Friends
+
+```{r}
+# load friendship dyad data frame
+df <- read.csv("./Paper-Analysis/data/friend-dyads.csv")
+
+# add dyad pair column
+df <- data.frame(df, stringsAsFactors = F) %>%
+  mutate(dyad = paste0(pmin(Target,ChoiceOption), pmax(Target,ChoiceOption), sep="")) 
+
+# ONLY include dyads who are in the same tribe (SameTribe = 1)
+sim <- subset(df, SameTribe == 1)
+# only include similarity, time, dyad name
+sim <- sim[,c(11,7,16)]
+
+# remove duplicate similarity rows
+sim <- distinct(sim, Time, dyad, .keep_all = T)
+
+# correlate time with similarity
+corr <- sim %>%
+  group_by(dyad) %>%
+    mutate(correlation = cor(similarity,Time))
+
+# get mean % time per PID chosen from friend choices (collapse across clips)
+friends <- df %>%
+  group_by(PID, dyad, condType) %>%
+    summarize(TimeChosen = mean(DyadPercentTimeChosen))
+
+# This pipe gives a friendly warning:
+# `summarise()` has grouped output by 'PID', 'dyad'. You can override using the `.groups` argument.
+# This is not an issue, it's just telling me what columns I'm grouping by before summarizing.
+
+# combine with % time chosen as friends from friends.choices
+friend.corr <- merge(corr, friends, by = "dyad")
+
+# remove friends & sim data frames
+rm(friends)
+rm(sim)
+```
+
+## Rivals
+
+```{r}
+# load rivalry dyad data frame
+df <- read.csv("./Paper-Analysis/data/rival-dyads.csv")
+
+# add dyad pair column
+df <- data.frame(df, stringsAsFactors = F) %>%
+  mutate(dyad = paste0(pmin(Target,ChoiceOption), pmax(Target,ChoiceOption), sep="")) 
+
+# ONLY include dyads who are in the same tribe (SameTribe = 1)
+sim <- subset(df, SameTribe == 1)
+# only include similarity, time, dyad name
+sim <- sim[,c(11,7,16)]
+
+# remove duplicate similarity rows
+sim <- distinct(sim, Time, dyad, .keep_all = T)
+
+# correlate time with similarity
+corr <- sim %>%
+  group_by(dyad) %>%
+    mutate(correlation = cor(similarity,Time))
+
+# get mean % time per PID chosen from friend choices (collapse across clips)
+rivals <- df %>%
+  group_by(PID, dyad, condType) %>%
+    summarize(TimeChosen = mean(DyadPercentTimeChosen))
+
+# This pipe gives a friendly warning:
+# `summarise()` has grouped output by 'PID', 'dyad'. You can override using the `.groups` argument.
+# This is not an issue, it's just telling me what columns I'm grouping by before summarizing.
+
+# combine with % time chosen as friends from friends.choices
+rival.corr <- merge(corr, rivals, by = "dyad")
+
+# remove friends & sim data frames
+rm(rivals)
+rm(sim)
+```
+
+## Model setup
+
+**Note: I do not mean center % time chosen because it is constrained between 0 and 1 (can't have negative % time chosen).**
+
+```{r}
+# combine all correlations for friendship and rivalry
+corr <- rbind(friend.corr, rival.corr)
+names(corr)[7] <- "PercentChosen"
+
+write.csv(corr, "./Paper-Analysis/data/friends_rivals_dyads.csv")
+
+# make condType a factor
+corr$condType <- as.factor(corr$condType)
+
+# print number of similarity assessments
+assessments <- corr %>%
+  group_by(dyad, Time, condType) %>% # include number of dyads at each time point per condType
+  summarize(similarityCount = mean(similarity))
+
+numObs <- nrow(assessments)
+print(paste0("Number of similarity assessments (count per condition type and time point) = ", numObs, sep = ""))
+
+# run overall linear regression
+# how is the similarity per dyad predicted by percent chosen as friends/rivals in episode 13 and time?
+# three way interaction between % time chosen, condition type (friend/rival), and time
+model1.wholeSeason <- lmer(similarity ~ PercentChosen * condType * Time + (1|PID) + (1|dyad),
+                           data = corr)
+
+# Singularity is a confirmed non-issue resolved with Bayesian approach. See supplemental section.
+
+# summarize model
+summary(model1.wholeSeason)
+
+# get confidence intervals
+confint(model1.wholeSeason)
+# get simple slopes
+simple_slopes(model1.wholeSeason)
+
+# get -1SD slope, mean slope, +1SD slope to plot similarity X time
+simple_slopes(model1.wholeSeason) %>%
+  filter(Time == "sstest")
+
+# plot 
+plot_model(model1.wholeSeason, type = "pred",
+          terms = c("Time","PercentChosen","condType"))
+
+# plot_model(model1.wholeSeason, type = "int",
+#            mdrt.values = "meansd")
+
+# Using summarize in this chunk gives the following messages:
+# `summarise()` has grouped output by 'dyad', 'Time'. You can override using the `.groups` argument.
+# This is not an issue, it is just telling me which columns I've grouped by before summarizing.
+
+```
+
+## Plot!
+
+```{r}
+# ggpredict
+model.df <- ggpredict(model1.wholeSeason, ci.lvl = 0.95,
+                      terms = c("Time","PercentChosen","condType"))
+model.df <- as.data.frame(model.df)
+
+# plot results!
+friend.df <- subset(model.df, facet == "Friend")
+rival.df <- subset(model.df, facet == "Rival")
+
+# 3 color gradient with friend and rival colors
+friend.color.gradient <- c("#ffbf70",fr.colors[1],"#cc7000")
+rival.color.gradient <- c("#fd4985",fr.colors[2],"#a20237")
+
+# friend condition, x axis = time, y axis = similarity, group = percent chosen as friends
+ggplot(friend.df, aes(x = x, y = predicted, color = group, fill = group)) +
+  geom_line(size = 1.5) +
+  geom_ribbon(alpha = .15,
+              aes(ymin = conf.low, ymax = conf.high),
+              linetype = .5) +
+  scale_x_continuous(breaks = scales::pretty_breaks(n = 11)) +
+  scale_fill_manual(labels = c("0.29 (-1 SD)", "0.5 (mean)", "0.71 (+1 SD)"),
+                      values = friend.color.gradient, name = "% time chosen") +
+  scale_color_manual(labels = c("0.29 (-1 SD)", "0.5 (mean)", "0.71 (+1 SD)"),
+                       values = friend.color.gradient, name = "% time chosen") +
+  xlab("Time") +
+  ylab("dyadic semantic similarity") +
+  theme_classic() +
+  theme(legend.position = "right",
+        panel.background = element_blank(),
+        axis.title.x = element_text(vjust = -0.4, size = 16),
+        axis.title.y = element_text(vjust = 1.5, size = 16), 
+        axis.text = element_text(size = 12),
+        legend.text = element_text(size = 10),
+        legend.title = element_text(size = 12))
+
+friend <- last_plot()
+
+# rival condition, x axis = time, y axis = similarity, group = percent chosen as friends
+ggplot(rival.df, aes(x = x, y = predicted, color = group, fill = group)) +
+  geom_line(size = 1.5) +
+  geom_ribbon(alpha = .15,
+              aes(ymin = conf.low, ymax = conf.high),
+              linetype = .5) +
+  scale_x_continuous(breaks = scales::pretty_breaks(n = 11)) +
+  scale_fill_manual(labels = c("0.29 (-1 SD)", "0.5 (mean)", "0.71 (+1 SD)"),
+                      values = rival.color.gradient, name = "% time chosen") +
+  scale_color_manual(labels = c("0.29 (-1 SD)", "0.5 (mean)", "0.71 (+1 SD)"),
+                       values = rival.color.gradient, name = "% time chosen") +
+  xlab("Time") +
+  ylab("dyadic semantic similarity") +
+  theme_classic() +
+  theme(legend.position = "right",
+        panel.background = element_blank(),
+        axis.title.x = element_text(vjust = -0.4, size = 16),
+        axis.title.y = element_text(vjust = 1.5, size = 16), 
+        axis.text = element_text(size = 12),
+        legend.text = element_text(size = 10),
+        legend.title = element_text(size = 12))
+
+rival <- last_plot()
+
+# plot together and save!
+friend | rival
+
+ggsave(filename = "Study3-multiplot.jpeg",
+       path = "/Volumes/GoogleDrive/My Drive/SANLab/Manuscripts/Survivor+Language/MarkdownFigures",
+       width = 10, height = 5,
+       units = c("in"))
+
+ggsave(filename = "Study3-multiplot.pdf",
+       path = "/Volumes/GoogleDrive/My Drive/SANLab/Manuscripts/Survivor+Language/MarkdownFigures",
+       width = 10, height = 5,
+       units = c("in"))
+
+```
+
+### Compare interaction model
+
+```{r}
+# run multilevel model
+model.wholeSeason <- lmer(similarity ~ PercentChosen * condType * Time + (1|PID) + (1|dyad),
+                           data = corr)
+# run main effect model (null)
+null.wholeSeason <- lmer(similarity ~ PercentChosen + condType + Time + (1|dyad) + (1|PID),
+                        data = corr)
+
+anova(model.wholeSeason, null.wholeSeason)
+
+```
+
+## Standardized Betas
+
+```{r}
+# standardize similarity, PercentChosen, and Time
+corr$similarityZ <- as.numeric(scale(corr$similarity))
+corr$PercentChosenZ <- as.numeric(scale(corr$PercentChosen))
+corr$TimeZ <- as.numeric(scale(corr$Time))
+
+model.wholeSeason <- lmer(similarityZ ~ PercentChosenZ * condType * TimeZ + (1|PID) + (1|dyad),
+                           data = corr)
+summary(model.wholeSeason)
+confint(model.wholeSeason)
+simple_slopes(model.wholeSeason)
+
+null.wholeSeason <- lmer(similarityZ ~ PercentChosenZ + condType + TimeZ + (1|dyad) + (1|PID),
+                        data = corr)
+
+anova(model.wholeSeason, null.wholeSeason)
+
+```
+
+
+# Supplemental: Bayesian approach to examine singularity
+
+We took a Bayesian approach in order to establish that singularity would not undermine the validity of the models. Singularity typically occurs when there is limited variability within the random effects term(s) and/or the random effects structure is overly-complex relative to the variability offered by the data. Given the nature of our data, we opted to retain our random effects in all frequentist models after examining the same models with a Bayesian approach (using uninformative/default priors, which should, and do, yield the same beta estimates as a frequentist approach).
+
+## Similarity
+```{r brms1}
+colors <- c("#2185c5ff","#ff9715ff","#f20253ff","#7ecefdff","#1c3aa9ff")
+fr.colors <- c(colors[2], colors[3])
+
+# 3 color gradient with friend and rival colors
+friend.color.gradient <- c("#ffbf70",fr.colors[1],"#cc7000")
+rival.color.gradient <- c("#fd4985",fr.colors[2],"#a20237")
+
+library(bayesplot)
+library(brms)
+library(tidybayes)
+library(interactions)
+
+model1.wholeSeason.brms <- brm(data = corr,
+      family = gaussian,
+      similarity ~ PercentChosen * condType * Time + (1|PID) + (1|dyad), 
+      iter = 4000, warmup = 1500, chains = 3, cores = 3,
+      control = list(adapt_delta = .999, max_treedepth = 15), 
+      seed = 9)
+
+summary(model1.wholeSeason.brms, waic = TRUE)
+conditional_effects(model1.wholeSeason.brms)
+pairs(model1.wholeSeason.brms)
+plot(model1.wholeSeason.brms)
+
+interactions::interact_plot(model = model1.wholeSeason.brms,
+                            pred = Time,
+                            modx = PercentChosen,
+                            mod2 = condType,
+                            data = corr)
+
+model1.wholeSeason.brms %>% 
+  neff_ratio() %>% 
+  mcmc_neff_hist(binwidth = .1) +
+  yaxis_text()
+
+#main effect model for comparison
+model1.wholeSeason.brms.main <- brm(data = corr,
+      family = gaussian,
+      similarity ~ PercentChosen + condType + Time + (1|PID) + (1|dyad), 
+      iter = 4000, warmup = 1500, chains = 3, cores = 3,
+      control = list(adapt_delta = .999, max_treedepth = 15), 
+      seed = 9)
+#model comparison via loo
+model1.wholeSeason.brms <- add_criterion(model1.wholeSeason.brms, "loo")
+model1.wholeSeason.brms.main <- add_criterion(model1.wholeSeason.brms.main, "loo")
+loo_compare(model1.wholeSeason.brms, model1.wholeSeason.brms.main) %>% 
+  print(simplify = F)
+```
+
+```{r}
+#plot!
+sim_int <- interactions::interact_plot(model = model1.wholeSeason.brms,
+                            pred = Time,
+                            modx = PercentChosen,
+                            mod2 = condType,
+                            data = corr,
+                            interval = T)
+
+sim_int <- as.data.frame(sim_int$data)
+friend_int <- subset(sim_int, mod2_group == "condType = Friend")
+rival_int <- subset(sim_int, mod2_group == "condType = Rival")
+
+# friend plot
+ggplot(friend_int, aes(x = Time, y = similarity, color = modx_group, fill = modx_group)) +
+  geom_line(size = 1.5) +
+  geom_ribbon(alpha = .15,
+              aes(ymin = ymin, ymax = ymax),
+              linetype = .5) +
+  scale_x_continuous(breaks = scales::pretty_breaks(n = 11)) +
+  scale_fill_manual(labels = c("0.29 (-1 SD)", "0.5 (mean)", "0.71 (+1 SD)"),
+                      values = friend.color.gradient, name = "% time chosen") +
+  scale_color_manual(labels = c("0.29 (-1 SD)", "0.5 (mean)", "0.71 (+1 SD)"),
+                       values = friend.color.gradient, name = "% time chosen") +
+  xlab("Time") +
+  ylab("dyadic semantic similarity") +
+  theme_classic() +
+  theme(legend.position = "right",
+        panel.background = element_blank(),
+        axis.title.x = element_text(vjust = -0.4, size = 16),
+        axis.title.y = element_text(vjust = 1.5, size = 16), 
+        axis.text = element_text(size = 12),
+        legend.text = element_text(size = 10),
+        legend.title = element_text(size = 12))
+
+friend <- last_plot()
+
+# rival plot
+ggplot(rival_int, aes(x = Time, y = similarity, color = modx_group, fill = modx_group)) +
+  geom_line(size = 1.5) +
+  geom_ribbon(alpha = .15,
+              aes(ymin = ymin, ymax = ymax),
+              linetype = .5) +
+  scale_x_continuous(breaks = scales::pretty_breaks(n = 11)) +
+  scale_fill_manual(labels = c("0.29 (-1 SD)", "0.5 (mean)", "0.71 (+1 SD)"),
+                      values = rival.color.gradient, name = "% time chosen") +
+  scale_color_manual(labels = c("0.29 (-1 SD)", "0.5 (mean)", "0.71 (+1 SD)"),
+                       values = rival.color.gradient, name = "% time chosen") +
+  xlab("Time") +
+  ylab("dyadic semantic similarity") +
+  theme_classic() +
+  theme(legend.position = "right",
+        panel.background = element_blank(),
+        axis.title.x = element_text(vjust = -0.4, size = 16),
+        axis.title.y = element_text(vjust = 1.5, size = 16), 
+        axis.text = element_text(size = 12),
+        legend.text = element_text(size = 10),
+        legend.title = element_text(size = 12))
+
+rival <- last_plot()
+
+# plot together and save!
+friend | rival
+
+ggsave(filename = "Study3-bayes-multiplot.jpeg",
+       path = "/Volumes/GoogleDrive/My Drive/SANLab/Manuscripts/Survivor+Language/MarkdownFigures",
+       width = 10, height = 5,
+       units = c("in"))
+
+ggsave(filename = "Study3-bayes-multiplot.pdf",
+       path = "/Volumes/GoogleDrive/My Drive/SANLab/Manuscripts/Survivor+Language/MarkdownFigures",
+       width = 10, height = 5,
+       units = c("in"))
+
+```

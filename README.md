@@ -1,4 +1,4 @@
-This project includes data and analytic scripts for the following paper:
+This repository includes data and analytic scripts for the following paper:
 
 **Schmidt, H., Tran, S., Medaglia, J.A., Ulichney, V., Mitchell, W.J., & Helion, C. (under review). Conversational Linguistic Features Inform Social-Relational Inference. *PsyArXiv Pre-Print: https://psyarxiv.com/fn4my/***
 
@@ -31,4 +31,3 @@ All scripts associated with this project are included. Analyses were performed i
  - `8-extract-posterior-draws` - Extract posteriors from Bayesian models and create plots
 
 Please direct any comments or questions to Helen Schmidt at helen_schmidt@temple.edu. Please feel free to use any of these scripts, but unfortunately I am unable to provide support if you adapt them to your own data. If you notice a bug or error, please tell me! 
-
